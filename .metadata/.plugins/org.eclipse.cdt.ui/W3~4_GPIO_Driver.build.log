@@ -1,0 +1,10 @@
+17:35:15 **** Incremental Build of configuration Debug for project W3~4_GPIO_Driver ****
+make -j4 all 
+arm-none-eabi-size  W3~4_GPIO_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5652	     92	   1900	   7644	   1ddc	W3~4_GPIO_Driver.elf
+Finished building: default.size.stdout
+ 
+
+17:35:16 Build Finished. 0 errors, 0 warnings. (took 74ms)
+

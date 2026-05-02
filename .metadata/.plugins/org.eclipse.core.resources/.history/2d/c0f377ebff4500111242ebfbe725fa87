@@ -1,0 +1,115 @@
+/*
+ * gpio_reg.h
+ *
+ *  Created on: 2026. 5. 2.
+ *      Author: justjhst
+ */
+
+#ifndef GPIO_REG_H_
+#define GPIO_REG_H_
+
+#include <stdint.h>
+
+#define AHB1PERIPH_BASE 0x40020000UL
+
+#define GPIOA_BASEADDR 	(AHB1PERIPH_BASE + 0x0000)
+#define GPIOB_BASEADDR 	(AHB1PERIPH_BASE + 0x0400)
+#define GPIOC_BASEADDR 	(AHB1PERIPH_BASE + 0x0800)
+
+#define RCC_BASEADDR 	0x40023800UL
+#define RCC_AHB1ENR		(*((volatile uint32_t*)(RCC_BASEADDR + 0x30UL)))
+
+typedef union
+{
+	uint32_t all;
+	struct {
+		uint32_t MODER0 : 2;
+		uint32_t MODER1 : 2;
+		uint32_t MODER2 : 2;
+		uint32_t MODER3 : 2;
+		uint32_t MODER4 : 2;
+		uint32_t MODER5 : 2;
+		uint32_t MODER6 : 2;
+		uint32_t MODER7 : 2;
+		uint32_t MODER8 : 2;
+		uint32_t MODER9 : 2;
+		uint32_t MODER10 : 2;
+		uint32_t MODER11 : 2;
+		uint32_t MODER12 : 2;
+		uint32_t MODER13 : 2;
+		uint32_t MODER14 : 2;
+		uint32_t MODER15 : 2;
+	}bits;
+}__attribute__((packed)) GPIO_MODER_t;
+
+typedef union
+{
+	uint32_t all;
+	struct {
+		uint32_t OT0 : 1;
+		uint32_t OT1 : 1;
+		uint32_t OT2 : 1;
+		uint32_t OT3 : 1;
+		uint32_t OT4 : 1;
+		uint32_t OT5 : 1;
+		uint32_t OT6 : 1;
+		uint32_t OT7 : 1;
+		uint32_t OT8 : 1;
+		uint32_t OT9 : 1;
+		uint32_t OT10 : 1;
+		uint32_t OT11 : 1;
+		uint32_t OT12 : 1;
+		uint32_t OT13 : 1;
+		uint32_t OT14 : 1;
+		uint32_t OT15 : 1;
+		uint32_t RESERVED : 16;
+	}bits;
+} __attribute__((packed)) GPIO_OTYPER_t;
+
+typedef union
+{
+	uint32_t all;
+	struct {
+		uint32_t OSPEEDR0 : 2;
+		uint32_t OSPEEDR1 : 2;
+		uint32_t OSPEEDR2 : 2;
+		uint32_t OSPEEDR3 : 2;
+		uint32_t OSPEEDR4 : 2;
+		uint32_t OSPEEDR5 : 2;
+		uint32_t OSPEEDR6 : 2;
+		uint32_t OSPEEDR7 : 2;
+		uint32_t OSPEEDR8 : 2;
+		uint32_t OSPEEDR9 : 2;
+		uint32_t OSPEEDR10 : 2;
+		uint32_t OSPEEDR11 : 2;
+		uint32_t OSPEEDR12 : 2;
+		uint32_t OSPEEDR13 : 2;
+		uint32_t OSPEEDR14 : 2;
+		uint32_t OSPEEDR15 : 2;
+	}bits;
+}__attribute__((packed)) GPIO_OSPEEDR_t;
+
+typedef union
+{
+	uint32_t all;
+	struct {
+		uint32_t PUPDR0 : 2;
+		uint32_t PUPDR1 : 2;
+		uint32_t PUPDR2 : 2;
+		uint32_t PUPDR3 : 2;
+		uint32_t PUPDR4 : 2;
+		uint32_t PUPDR5 : 2;
+		uint32_t PUPDR6 : 2;
+		uint32_t PUPDR7 : 2;
+		uint32_t PUPDR8 : 2;
+		uint32_t PUPDR9 : 2;
+		uint32_t PUPDR10 : 2;
+		uint32_t PUPDR11 : 2;
+		uint32_t PUPDR12 : 2;
+		uint32_t PUPDR13 : 2;
+		uint32_t PUPDR14 : 2;
+		uint32_t PUPDR15 : 2;
+	};
+};
+
+#endif /* GPIO_REG_H_ */

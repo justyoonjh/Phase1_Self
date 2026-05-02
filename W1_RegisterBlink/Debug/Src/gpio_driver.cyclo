@@ -1,0 +1,8 @@
+../Src/gpio_driver.c:3:6:GPIO_ClockEnable_GPIOA	1
+../Src/gpio_driver.c:7:6:GPIO_SetMode	1
+../Src/gpio_driver.c:12:6:GPIO_Setpin_BSRR	1
+../Src/gpio_driver.c:16:6:GPIO_Resetpin_BSRR	1
+../Src/gpio_driver.c:20:6:GPIO_Writepin	2
+../Src/gpio_driver.c:27:6:GPIO_Togglepin	1
+../Src/gpio_driver.c:31:9:GPIO_Readpin	1
+../Src/gpio_driver.c:35:6:delay_sw	2

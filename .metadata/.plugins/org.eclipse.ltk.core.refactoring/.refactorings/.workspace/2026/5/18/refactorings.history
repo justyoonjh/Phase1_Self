@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;W3_GPIO_Driver&apos; to &apos;W3~4_GPIO_Driver&apos;" description="Rename resource &apos;W3_GPIO_Driver&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/W3_GPIO_Driver" name="W3~4_GPIO_Driver" stamp="1777708226038" updateReferences="true"/>
+</session>
