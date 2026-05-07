@@ -1,0 +1,19 @@
+2026-05-02 15:32:18,292 [INFO] Activator:176 - 
+
+
+2026-05-02 15:32:18,298 [INFO] Activator:177 - !SESSION log4j initialized
+2026-05-02 15:32:22,966 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-05-02 16:37:17,140 [INFO] Activator:176 - 
+
+
+2026-05-02 16:37:17,141 [INFO] Activator:177 - !SESSION log4j initialized
+2026-05-02 16:37:21,789 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-05-02 17:35:37,453 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-05-02 17:41:54,150 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-02 17:41:56,153 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-02 17:41:58,156 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-02 17:42:00,172 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-02 17:42:02,176 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-02 17:42:04,178 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-05-02 17:42:08,086 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-05-02 17:42:09,574 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
