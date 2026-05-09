@@ -90,7 +90,7 @@ void GPIO_PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi);
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle);
 uint8_t GPIO_ReadFromInputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber);
 void GPIO_WriteToOutPutPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber, uint8_t Value);
-void GPIO_ToggleOutputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber);
+void GPIOToggleOutputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber);
 
 
 #endif

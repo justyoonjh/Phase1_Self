@@ -7,7 +7,7 @@
 
 #include "gpio_driver.h"
 
-void GPIO_PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi)
+void PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi)
 {
 	if (EnorDi == 1)
 	{
@@ -22,13 +22,6 @@ void GPIO_PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi)
 		else if (pGPIOx == GPIOC) { GPIOC_CLK_DI(); }
 	}
 }
-
-/*
-GPIO_Init 내부 RMW(Read-Modify-Write) 패턴
-1. RAM에서 계산(READ)
-2. 해당 필드 클리어(MODIFY)
-3. 새 값 세팅(WRITE)
-*/
 
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 {

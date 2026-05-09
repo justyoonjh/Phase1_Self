@@ -7,7 +7,7 @@
 
 #include "gpio_driver.h"
 
-void GPIO_PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi)
+void PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi)
 {
 	if (EnorDi == 1)
 	{
@@ -22,13 +22,6 @@ void GPIO_PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi)
 		else if (pGPIOx == GPIOC) { GPIOC_CLK_DI(); }
 	}
 }
-
-/*
-GPIO_Init 내부 RMW(Read-Modify-Write) 패턴
-1. RAM에서 계산(READ)
-2. 해당 필드 클리어(MODIFY)
-3. 새 값 세팅(WRITE)
-*/
 
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 {
@@ -64,26 +57,3 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 				(pGPIOHandle->GPIO_PinConfig.GPIO_PinAltFunMode << (4 * offset));
 	}
 }
-
-uint8_t GPIO_ReadFromInputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber)
-{
-	return (uint8_t)((pGPIOx->IDR.all >> PinNumber) & 0x1);
-}
-
-void GPIO_WriteToOutputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber, uint8_t Value)
-{
-	if (Value == GPIO_PIN_SET)
-	{
-		pGPIOx->ODR.all |= (1 << PinNumber);
-	}
-	else
-	{
-		pGPIOx->ODR.all &= ~(1 << PinNumber);
-	}
-}
-
-void GPIO_ToggleOutputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber)
-{
-	pGPIOx->ODR.all ^= (1 << PinNumber);
-}
-
