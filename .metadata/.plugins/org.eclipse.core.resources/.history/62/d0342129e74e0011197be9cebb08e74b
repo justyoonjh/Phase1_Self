@@ -10,14 +10,6 @@
 
 #include <stdint.h>
 
-#define NVIC_ISER_BASE	0xE000E100UL
-#define NVIC_ICER_BASE	0xE000E180UL
-#define NVIC_IPR_BASE	0xE000E400UL
-
-#define NVIC_ISER(n)		(*((volatile uint32_t*)(NVIC_ISER_BASE + (n)*4)))
-#define NVIC_ICER(n)		(*((volatile uint32_t*)(NVIC_ICER_BASE + (n)*4)))
-#define NVIC_IPR(n)		(*((volatile uint8_t*)(NVIC_IPR_BASE + (n)*4)))
-
 #define AHB1PERIPH_BASE 0x40020000UL
 
 #define GPIOA_BASEADDR 	(AHB1PERIPH_BASE + 0x0000)
@@ -26,10 +18,8 @@
 
 #define RCC_BASEADDR 	0x40023800UL
 #define RCC_AHB1ENR		(*((volatile uint32_t*)(RCC_BASEADDR + 0x30UL)))
-#define RCC_APB2ENR		(*((volatile uint32_t*)(RCC_BASEADDR + 0x44UL)))
 
 #define EXTI_BASEADDR	0x40013C00UL
-#define SYSCFG_BASEADDR	0x40013800UL
 
 typedef union
 {
@@ -224,38 +214,12 @@ typedef struct
 	uint32_t AFR[2];
 }__attribute__((packed)) GPIO_RegMap_t;
 
-typedef struct
-{
-	volatile uint32_t IMR;
-	volatile uint32_t EMR;
-	volatile uint32_t RTSR;
-	volatile uint32_t FTSR;
-	volatile uint32_t SWIER;
-	volatile uint32_t PR;
-}EXTI_RegMap_t;
-
-typedef struct
-{
-	volatile uint32_t MEMRMP;
-	volatile uint32_t PMC;
-	volatile uint32_t EXTICR[4];
-	volatile uint32_t RESERVED[2];
-	volatile uint32_t CMPCR;
-}SYSCFG_RegMap_t;
-
 #define GPIOA				((GPIO_RegMap_t*) GPIOA_BASEADDR)
 #define GPIOB				((GPIO_RegMap_t*) GPIOB_BASEADDR)
 #define GPIOC				((GPIO_RegMap_t*) GPIOC_BASEADDR)
-#define EXTI				((EXTI_RegMap_t*) EXTI_BASEADDR)
-#define SYSCFG			((SYSCFG_RegMap_t*) SYSCFG_BASEADDR)
-#define SYSCFG_CLK_EN	(RCC_APB2ENR |= (1 << 14))
 
-#define EXTI0_IRQ			6
-#define EXTI1_IRQ			7
-#define EXTI2_IRQ			8
-#define EXTI3_IRQ			9
-#define EXTI4_IRQ			10
-#define EXTI9_5_IRQ		23
-#define EXTI15_10_IRQ	40
+
+
+
 
 #endif /* GPIO_REG_H_ */
