@@ -16,7 +16,7 @@
 
 #define NVIC_ISER(n)		(*((volatile uint32_t*)(NVIC_ISER_BASE + (n)*4)))
 #define NVIC_ICER(n)		(*((volatile uint32_t*)(NVIC_ICER_BASE + (n)*4)))
-#define NVIC_IPR(n)		(*((volatile uint8_t*)(NVIC_IPR_BASE + (n))))
+#define NVIC_IPR(n)		(*((volatile uint8_t*)(NVIC_IPR_BASE + (n)*4)))
 
 #define AHB1PERIPH_BASE 0x40020000UL
 
