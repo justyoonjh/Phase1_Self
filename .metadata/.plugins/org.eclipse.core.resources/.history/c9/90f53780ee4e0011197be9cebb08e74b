@@ -35,11 +35,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 	uint32_t temp = 0;
 	uint8_t pin = pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber;
 
-	uint8_t moder_val = (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode >= GPIO_MODE_IT_FT)
-			? GPIO_MODE_INPUT
-			: pGPIOHandle->GPIO_PinConfig.GPIO_PinMode;
-
-	temp = (moder_val << (2 * pin));
+	temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode << (2 * pin));
 	pGPIOHandle->pGPIOx->MODER.all &= ~(0x3 << (2 * pin));
 	pGPIOHandle->pGPIOx->MODER.all |= temp;
 	temp = 0;
@@ -85,21 +81,6 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 			EXTI->FTSR |= (1 << pin);
 			EXTI->RTSR |= (1 << pin);
 		}
-
-		SYSCFG_CLK_EN;
-
-		uint8_t exticr_idx = pin / 4;
-		uint8_t exticr_pos = (pin % 4) * 4;
-
-		uint8_t port_code = 0;
-		if (pGPIOHandle->pGPIOx == GPIOA) { port_code = 0; }
-		else if (pGPIOHandle->pGPIOx == GPIOB) {port_code = 1;}
-		else if (pGPIOHandle->pGPIOx == GPIOC) {port_code = 2;}
-
-		SYSCFG->EXTICR[exticr_idx] &= ~(0xFU << exticr_pos);
-		STSCFG->EXTICR[exticr_idx] |= (port_code << exticr_pos);
-
-		EXTI->IMR |= (1 << pin);
 	}
 }
 
@@ -125,27 +106,3 @@ void GPIO_ToggleOutputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber)
 	pGPIOx->ODR.all ^= (1 << PinNumber);
 }
 
-void GPIO_IRQConfig(uint8_t IRQNumber, uint8_t Priority, uint8_t EnorDi)
-{
-	NVIC_IPR(IRQNumber) = (Priority << 4);
-
-	uint8_t iser_idx = IRQNumber / 32;
-	uint8_t iser_bit = IRQNumber % 32;
-
-	if (EnorDi == 1)
-	{
-		NVIC_ISER(iser_idx) |= (1U << iser_bit);
-	}
-	else
-	{
-		NVIC_ICER(iser_idx) |= (1U << iser_bit);
-	}
-}
-
-void GPIO_IRQHandling(uint8_t PinNumber)
-{
-	if (EXTI->PR & (1 << PinNumber))
-	{
-		EXTI->PR |= (1 << PinNumber);
-	}
-}

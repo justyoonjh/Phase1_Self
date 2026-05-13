@@ -144,8 +144,5 @@ void GPIO_IRQConfig(uint8_t IRQNumber, uint8_t Priority, uint8_t EnorDi)
 
 void GPIO_IRQHandling(uint8_t PinNumber)
 {
-	if (EXTI->PR & (1 << PinNumber))
-	{
-		EXTI->PR |= (1 << PinNumber);
-	}
+
 }

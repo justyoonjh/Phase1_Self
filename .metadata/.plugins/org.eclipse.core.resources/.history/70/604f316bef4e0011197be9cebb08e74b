@@ -125,27 +125,3 @@ void GPIO_ToggleOutputPin(GPIO_RegMap_t *pGPIOx, uint8_t PinNumber)
 	pGPIOx->ODR.all ^= (1 << PinNumber);
 }
 
-void GPIO_IRQConfig(uint8_t IRQNumber, uint8_t Priority, uint8_t EnorDi)
-{
-	NVIC_IPR(IRQNumber) = (Priority << 4);
-
-	uint8_t iser_idx = IRQNumber / 32;
-	uint8_t iser_bit = IRQNumber % 32;
-
-	if (EnorDi == 1)
-	{
-		NVIC_ISER(iser_idx) |= (1U << iser_bit);
-	}
-	else
-	{
-		NVIC_ICER(iser_idx) |= (1U << iser_bit);
-	}
-}
-
-void GPIO_IRQHandling(uint8_t PinNumber)
-{
-	if (EXTI->PR & (1 << PinNumber))
-	{
-		EXTI->PR |= (1 << PinNumber);
-	}
-}

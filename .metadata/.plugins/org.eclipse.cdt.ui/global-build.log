@@ -216,3 +216,24 @@ Finished building: default.size.stdout
  
 Finished building: W5_Interrupt_Toggle.list
  
+01:33:05 **** Incremental Build of configuration Debug for project W1_RegisterBlink ****
+make -j4 all 
+arm-none-eabi-size  W1_RegisterBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1068	      0	   1568	   2636	    a4c	W1_RegisterBlink.elf
+Finished building: default.size.stdout
+ 
+01:33:05 **** Incremental Build of configuration Debug for project W3~4_GPIO_Driver ****
+make -j4 all 
+arm-none-eabi-size  W3~4_GPIO_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4716	     92	   1900	   6708	   1a34	W3~4_GPIO_Driver.elf
+Finished building: default.size.stdout
+ 
+01:33:06 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
