@@ -1,4 +1,4 @@
-00:34:02 **** Incremental Build of configuration Debug for project W1_RegisterBlink ****
+00:43:06 **** Incremental Build of configuration Debug for project W1_RegisterBlink ****
 make -j4 all 
 arm-none-eabi-size  W1_RegisterBlink.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  W1_RegisterBlink.elf
 Finished building: default.size.stdout
  
 
-00:34:02 Build Finished. 0 errors, 0 warnings. (took 70ms)
+00:43:06 Build Finished. 0 errors, 0 warnings. (took 68ms)
 

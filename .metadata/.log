@@ -401,3 +401,6 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-05-15 00:33:58.961
 !MESSAGE Indexed 'W5_Interrupt_Toggle' (3 sources, 56 headers) in 0.445 sec: 2,230 declarations; 3,136 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.037%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-05-15 00:44:30.941
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
