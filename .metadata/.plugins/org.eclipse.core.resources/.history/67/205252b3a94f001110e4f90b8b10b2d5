@@ -65,6 +65,6 @@ int main(void)
 
 void EXTI15_10_IRQHandler(void)
 {
-	GPIO_IRQHandling(GPIO_PIN_NO_13);
+	GPIO_IRQHanling(GPIO_PIN_NO_13);
 	btn_flag = 1;
 }

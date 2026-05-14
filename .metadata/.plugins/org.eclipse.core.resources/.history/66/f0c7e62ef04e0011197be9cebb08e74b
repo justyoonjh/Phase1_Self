@@ -4,7 +4,7 @@
  *  Created on: 2026. 5. 2.
  *      Author: justjhst
  */
-#include "gpio_reg.h"
+
 #include "gpio_driver.h"
 
 void GPIO_PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi)
@@ -97,7 +97,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 		else if (pGPIOHandle->pGPIOx == GPIOC) {port_code = 2;}
 
 		SYSCFG->EXTICR[exticr_idx] &= ~(0xFU << exticr_pos);
-		SYSCFG->EXTICR[exticr_idx] |= (port_code << exticr_pos);
+		STSCFG->EXTICR[exticr_idx] |= (port_code << exticr_pos);
 
 		EXTI->IMR |= (1 << pin);
 	}
