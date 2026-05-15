@@ -71,9 +71,8 @@ int main(void)
 	GPIO_IRQConfig(EXTI15_10_IRQ, 3, 1);
 	GPIO_IRQConfig(EXTI0_IRQ, 6, 1);
 
-	printf("===Priority Test===\r\n");
-	printf("PC13 priority=3, PA0 priority=6\r\n");
-	printf("Press both buttons simultaneously\r\n");
+	printf("=== Chatter Test Ready===\r\n");
+	printf("Press PA0 switch, then check chatter_cnt via debugger\r\n");
 
 	while(1)
 	{

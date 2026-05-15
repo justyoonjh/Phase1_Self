@@ -1,10 +1,10 @@
-01:49:45 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+10:50:05 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
 make -j4 all 
 arm-none-eabi-size  W5_Interrupt_Toggle.elf 
    text	   data	    bss	    dec	    hex	filename
-   5260	     92	   1908	   7260	   1c5c	W5_Interrupt_Toggle.elf
+   7112	     92	   1924	   9128	   23a8	W5_Interrupt_Toggle.elf
 Finished building: default.size.stdout
  
 
-01:49:46 Build Finished. 0 errors, 0 warnings. (took 72ms)
+10:50:05 Build Finished. 0 errors, 0 warnings. (took 74ms)
 

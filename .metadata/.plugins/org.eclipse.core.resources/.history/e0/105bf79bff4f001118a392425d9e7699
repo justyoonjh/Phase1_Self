@@ -20,6 +20,8 @@
 #include <stdio.h>
 #include "gpio_driver.h"
 
+volatile uint8_t btn_flag = 0;
+volatile uint32_t chatter_cnt = 0;
 volatile uint32_t tick = 0;
 volatile uint32_t last_isr_tick = 0;
 
@@ -62,30 +64,28 @@ int main(void)
 	GPIO_Handle_t GpioExt;
 	GpioExt.pGPIOx											= GPIOA;
 	GpioExt.GPIO_PinConfig.GPIO_PinNumber					= GPIO_PIN_NO_0;
-	GpioExt.GPIO_PinConfig.GPIO_PinMode					= GPIO_MODE_IT_FT;
+	GpioExt.GPIO_PinConfig.GPIO_PinMode					= GPIO_MODE_IT_RFT;
 	GpioExt.GPIO_PinConfig.GPIO_PinSpeed					= GPIO_SPEED_LOW;
 	GpioExt.GPIO_PinConfig.GPIO_PinOPType					= GPIO_OPTYPE_PP;
 	GpioExt.GPIO_PinConfig.GPIO_PinPuPdControl			= GPIO_PU;
 	GPIO_Init(&GpioExt);
 
-	GPIO_IRQConfig(EXTI15_10_IRQ, 3, 1);
+	GPIO_IRQConfig(EXTI15_10_IRQ, 5, 1);
 	GPIO_IRQConfig(EXTI0_IRQ, 6, 1);
 
-	printf("===Priority Test===\r\n");
-	printf("PC13 priority=3, PA0 priority=6\r\n");
-	printf("Press both buttons simultaneously\r\n");
+	printf("=== Chatter Test Ready===\r\n");
+	printf("Press PA0 switch, then check chatter_cnt via debugger\r\n");
 
 	while(1)
 	{
 		tick++;
 
-		if (isr_cnt >= 2)
+		if (btn_flag)
 		{
-			printf("Order: %d -> %d\r\n", isr_order[0], isr_order[1]);
-
-			isr_cnt = 0;
-			isr_order[0] = 0;
-			isr_order[1] = 0;
+			btn_flag = 0;
+			GPIOA->BSRR.all = (GPIOA->ODR.bits.ODR5)
+					? (1 << 21)
+					: (1 << 5);
 		}
 	}
 }
@@ -93,8 +93,7 @@ int main(void)
 void EXTI15_10_IRQHandler(void)
 {
 	GPIO_IRQHandling(GPIO_PIN_NO_13);
-	if (isr_cnt < 10)
-		isr_order[isr_cnt++] = 1;
+	btn_flag = 1;
 }
 
 void EXTI0_IRQHandler(void)
@@ -104,6 +103,6 @@ void EXTI0_IRQHandler(void)
 	if((tick - last_isr_tick) < DEBOUNCE_TICKS)
 		return;
 
-	if (isr_cnt < 10)
-		isr_order[isr_cnt++] = 2;
+	last_isr_tick = tick;
+	chatter_cnt++;
 }
