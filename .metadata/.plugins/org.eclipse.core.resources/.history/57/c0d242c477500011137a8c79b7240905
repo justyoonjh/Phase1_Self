@@ -64,8 +64,8 @@ int main(void)
 	GpioExt.GPIO_PinConfig.GPIO_PinPuPdControl			= GPIO_PU;
 	GPIO_Init(&GpioExt);
 
-	GPIO_IRQConfig(EXTI15_10_IRQ, 3, 1);
-	GPIO_IRQConfig(EXTI0_IRQ, 6, 1);
+	GPIO_IRQConfig(EXTI15_10_IRQ, 6, 1);
+	GPIO_IRQConfig(EXTI0_IRQ, 3, 1);
 
 	printf("===Priority Test===\r\n");
 	printf("PC13 priority=3, PA0 priority=6\r\n");

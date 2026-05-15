@@ -91,7 +91,7 @@ void EXTI15_10_IRQHandler(void)
 	if (isr_cnt < 10)
 		isr_order[isr_cnt++] = 1;
 
-	for (volatile uint32_t i = 0; i < 2000000; i++);
+	for (volatile uint32_t i = 0; i < 500000; i++);
 }
 
 void EXTI0_IRQHandler(void)

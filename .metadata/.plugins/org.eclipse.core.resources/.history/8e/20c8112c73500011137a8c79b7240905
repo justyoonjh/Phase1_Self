@@ -20,6 +20,10 @@
 #include <stdio.h>
 #include "gpio_driver.h"
 
+volatile uint32_t tick = 0;
+volatile uint32_t last_isr_tick = 0;
+
+#define DEBOUNCE_TICKS 5000UL
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -73,6 +77,7 @@ int main(void)
 
 	while(1)
 	{
+		tick++;
 
 		if (isr_cnt >= 2)
 		{
@@ -90,13 +95,15 @@ void EXTI15_10_IRQHandler(void)
 	GPIO_IRQHandling(GPIO_PIN_NO_13);
 	if (isr_cnt < 10)
 		isr_order[isr_cnt++] = 1;
-
-	for (volatile uint32_t i = 0; i < 2000000; i++);
 }
 
 void EXTI0_IRQHandler(void)
 {
 	GPIO_IRQHandling(GPIO_PIN_NO_0);
+
+	if((tick - last_isr_tick) < DEBOUNCE_TICKS)
+		return;
+	last_isr_tick = tick;
 	if (isr_cnt < 10)
 		isr_order[isr_cnt++] = 2;
 }

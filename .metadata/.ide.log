@@ -1,10 +1,1 @@
-2026-05-15 10:42:14,504 [INFO] Activator:176 - 
-
-
-2026-05-15 10:42:14,509 [INFO] Activator:177 - !SESSION log4j initialized
-2026-05-15 10:42:19,051 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
-2026-05-15 23:49:04,645 [INFO] Activator:176 - 
-
-
-2026-05-15 23:49:04,647 [INFO] Activator:177 - !SESSION log4j initialized
-2026-05-15 23:49:09,502 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-05-16 00:11:24,665 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true

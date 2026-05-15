@@ -716,3 +716,96 @@ arm-none-eabi-size  W5_Interrupt_Toggle.elf
    7196	     92	   1924	   9212	   23fc	W5_Interrupt_Toggle.elf
 Finished building: default.size.stdout
  
+00:11:15 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7196	     92	   1924	   9212	   23fc	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
+00:52:26 **** Incremental Build of configuration Debug for project W1_RegisterBlink ****
+make -j4 all 
+arm-none-eabi-size  W1_RegisterBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1068	      0	   1568	   2636	    a4c	W1_RegisterBlink.elf
+Finished building: default.size.stdout
+ 
+00:52:26 **** Incremental Build of configuration Debug for project W3~4_GPIO_Driver ****
+make -j4 all 
+arm-none-eabi-size  W3~4_GPIO_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4716	     92	   1900	   6708	   1a34	W3~4_GPIO_Driver.elf
+Finished building: default.size.stdout
+ 
+00:52:26 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:25:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   25 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "W5_Interrupt_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5_Interrupt_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W5_Interrupt_Toggle.elf
+ 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+arm-none-eabi-objdump -h -S W5_Interrupt_Toggle.elf  > "W5_Interrupt_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+   7180	     92	   1916	   9188	   23e4	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: W5_Interrupt_Toggle.list
+ 
+00:52:48 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7180	     92	   1916	   9188	   23e4	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
+00:57:10 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:25:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   25 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "W5_Interrupt_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5_Interrupt_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W5_Interrupt_Toggle.elf
+ 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7180	     92	   1916	   9188	   23e4	W5_Interrupt_Toggle.elf
+arm-none-eabi-objdump -h -S W5_Interrupt_Toggle.elf  > "W5_Interrupt_Toggle.list"
+Finished building: default.size.stdout
+ 
+Finished building: W5_Interrupt_Toggle.list
+ 
+01:04:20 **** Incremental Build of configuration Debug for project W1_RegisterBlink ****
+make -j4 all 
+arm-none-eabi-size  W1_RegisterBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1068	      0	   1568	   2636	    a4c	W1_RegisterBlink.elf
+Finished building: default.size.stdout
+ 
+01:04:20 **** Incremental Build of configuration Debug for project W3~4_GPIO_Driver ****
+make -j4 all 
+arm-none-eabi-size  W3~4_GPIO_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4716	     92	   1900	   6708	   1a34	W3~4_GPIO_Driver.elf
+Finished building: default.size.stdout
+ 
+01:04:20 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:25:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   25 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "W5_Interrupt_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5_Interrupt_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W5_Interrupt_Toggle.elf
+ 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+arm-none-eabi-objdump -h -S W5_Interrupt_Toggle.elf  > "W5_Interrupt_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+   7180	     92	   1916	   9188	   23e4	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: W5_Interrupt_Toggle.list
+ 
