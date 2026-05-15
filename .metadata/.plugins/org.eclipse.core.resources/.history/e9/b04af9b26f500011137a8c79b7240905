@@ -103,7 +103,7 @@ void EXTI0_IRQHandler(void)
 
 	if((tick - last_isr_tick) < DEBOUNCE_TICKS)
 		return;
-	last_isr_tick = tick;
+
 	if (isr_cnt < 10)
 		isr_order[isr_cnt++] = 2;
 }
