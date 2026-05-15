@@ -614,3 +614,66 @@ arm-none-eabi-size  W5_Interrupt_Toggle.elf
    7112	     92	   1924	   9128	   23a8	W5_Interrupt_Toggle.elf
 Finished building: default.size.stdout
  
+10:55:27 **** Incremental Build of configuration Debug for project W1_RegisterBlink ****
+make -j4 all 
+arm-none-eabi-size  W1_RegisterBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1068	      0	   1568	   2636	    a4c	W1_RegisterBlink.elf
+Finished building: default.size.stdout
+ 
+10:55:27 **** Incremental Build of configuration Debug for project W3~4_GPIO_Driver ****
+make -j4 all 
+arm-none-eabi-size  W3~4_GPIO_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4716	     92	   1900	   6708	   1a34	W3~4_GPIO_Driver.elf
+Finished building: default.size.stdout
+ 
+10:55:27 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -o "W5_Interrupt_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W5_Interrupt_Toggle/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5_Interrupt_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W5_Interrupt_Toggle.elf
+ 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+arm-none-eabi-objdump -h -S W5_Interrupt_Toggle.elf  > "W5_Interrupt_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+   7188	     92	   1924	   9204	   23f4	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: W5_Interrupt_Toggle.list
+ 
+10:55:31 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7188	     92	   1924	   9204	   23f4	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
+23:59:01 **** Incremental Build of configuration Debug for project W1_RegisterBlink ****
+make -j4 all 
+arm-none-eabi-size  W1_RegisterBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1068	      0	   1568	   2636	    a4c	W1_RegisterBlink.elf
+Finished building: default.size.stdout
+ 
+23:59:02 **** Incremental Build of configuration Debug for project W3~4_GPIO_Driver ****
+make -j4 all 
+arm-none-eabi-size  W3~4_GPIO_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4716	     92	   1900	   6708	   1a34	W3~4_GPIO_Driver.elf
+Finished building: default.size.stdout
+ 
+23:59:02 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7188	     92	   1924	   9204	   23f4	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
+23:59:15 **** Incremental Build of configuration Debug for project W5_Interrupt_Toggle ****
+make -j4 all 
+arm-none-eabi-size  W5_Interrupt_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7188	     92	   1924	   9204	   23f4	W5_Interrupt_Toggle.elf
+Finished building: default.size.stdout
+ 
