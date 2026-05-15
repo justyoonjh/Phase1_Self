@@ -28,8 +28,6 @@
 volatile uint8_t isr_order[10] = {0};
 volatile uint8_t isr_cnt			= 0;
 
-volatile uint8_t pc13_in_delay = 0;
-volatile uint8_t preempt_result = 0;
 
 int main(void)
 {
@@ -84,19 +82,8 @@ int main(void)
 			isr_order[0] = 0;
 			isr_order[1] = 0;
 		}
-
-		if (preempt_result != 0)
-		{
-			if (preempt_result == 1)
-				printf(">>> PREEMPTED! PA0 ran during PC13 delay.\r\n");
-			else
-				printf(">>> No preemption. PA0 ran after PC13 delay\r\n");
-			preempt_result = 0;
-		}
 	}
 }
-
-
 
 void EXTI15_10_IRQHandler(void)
 {
@@ -104,9 +91,7 @@ void EXTI15_10_IRQHandler(void)
 	if (isr_cnt < 10)
 		isr_order[isr_cnt++] = 1;
 
-	pc13_in_delay = 1;
-	for (volatile uint32_t i = 0; i < 20000000; i++);
-	pc13_in_delay = 0;
+	for (volatile uint32_t i = 0; i < 2000000; i++);
 }
 
 void EXTI0_IRQHandler(void)
@@ -114,6 +99,4 @@ void EXTI0_IRQHandler(void)
 	GPIO_IRQHandling(GPIO_PIN_NO_0);
 	if (isr_cnt < 10)
 		isr_order[isr_cnt++] = 2;
-
-	preempt_result = pc13_in_delay ? 1 : 2;
 }

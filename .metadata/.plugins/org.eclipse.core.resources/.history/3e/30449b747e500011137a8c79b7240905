@@ -91,7 +91,7 @@ int main(void)
 				printf(">>> PREEMPTED! PA0 ran during PC13 delay.\r\n");
 			else
 				printf(">>> No preemption. PA0 ran after PC13 delay\r\n");
-			preempt_result = 0;
+			preempt+result = 0;
 		}
 	}
 }

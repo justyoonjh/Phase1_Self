@@ -28,8 +28,6 @@
 volatile uint8_t isr_order[10] = {0};
 volatile uint8_t isr_cnt			= 0;
 
-volatile uint8_t pc13_in_delay = 0;
-volatile uint8_t preempt_result = 0;
 
 int main(void)
 {
@@ -91,12 +89,13 @@ int main(void)
 				printf(">>> PREEMPTED! PA0 ran during PC13 delay.\r\n");
 			else
 				printf(">>> No preemption. PA0 ran after PC13 delay\r\n");
-			preempt_result = 0;
+			preempt+result = 0;
 		}
 	}
 }
 
-
+volatile uint8_t pc13_in_delay = 0;
+volatile uint8_t preempt_result = 0;
 
 void EXTI15_10_IRQHandler(void)
 {
