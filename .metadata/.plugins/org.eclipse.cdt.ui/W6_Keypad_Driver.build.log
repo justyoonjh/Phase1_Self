@@ -1,10 +1,10 @@
-17:31:33 **** Incremental Build of configuration Debug for project W6_Keypad_Driver ****
+18:26:37 **** Incremental Build of configuration Debug for project W6_Keypad_Driver ****
 make -j4 all 
 arm-none-eabi-size  W6_Keypad_Driver.elf 
    text	   data	    bss	    dec	    hex	filename
-   2364	      0	   1568	   3932	    f5c	W6_Keypad_Driver.elf
+   7228	     92	   1900	   9220	   2404	W6_Keypad_Driver.elf
 Finished building: default.size.stdout
  
 
-17:31:33 Build Finished. 0 errors, 0 warnings. (took 67ms)
+18:26:38 Build Finished. 0 errors, 0 warnings. (took 70ms)
 

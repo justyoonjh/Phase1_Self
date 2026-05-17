@@ -4,7 +4,7 @@ static const uint8_t ROW_PINS[4] = {
 		GPIO_PIN_NO_0,
 		GPIO_PIN_NO_1,
 		GPIO_PIN_NO_2,
-		GPIO_PIN_NO_10,
+		GPIO_PIN_NO_3,
 };
 
 static const uint8_t COL_PINS[4] = {
