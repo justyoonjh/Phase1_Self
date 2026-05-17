@@ -20,7 +20,7 @@ void SysTick_Init(void)
 	SYST_CSR = SYST_CSR_CLKSOURCE | SYST_CSR_TICKINT | SYST_CSR_ENABLE;
 }
 
-void SysTick_Handler(void)
+void Systick_Handler(void)
 {
 	uwTick++;
 }

@@ -1,4 +1,4 @@
 ../Drivers/systick.c:12:6:SysTick_Init	4	static
-../Drivers/systick.c:23:6:Systick_Handler	4	static
+../Drivers/systick.c:23:6:SysTick_Handler	4	static
 ../Drivers/systick.c:28:10:GetTick	4	static
 ../Drivers/systick.c:33:6:Delay_ms	24	static
