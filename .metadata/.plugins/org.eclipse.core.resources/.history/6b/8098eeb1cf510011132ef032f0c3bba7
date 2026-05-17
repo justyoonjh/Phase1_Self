@@ -54,8 +54,8 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 	pGPIOHandle->pGPIOx->PUPDR.all |= temp;
 	temp = 0;
 
-	temp =(pGPIOHandle->GPIO_PinConfig.GPIO_PinOPType << pin);
-	pGPIOHandle->pGPIOx->OTYPER.all &= ~(0x1 * pin);
+	temp =(pGPIOHandle->GPIO_PinConfig.GPIO_PinOPType << (2 * pin));
+	pGPIOHandle->pGPIOx->OTYPER.all &= ~(0x3 << (2 * pin));
 	pGPIOHandle->pGPIOx->OTYPER.all |= temp;
 	temp = 0;
 
