@@ -46,7 +46,7 @@ int main(void)
 	GPIO_PeriClockControl(GPIOA, 1);
 	GPIO_Init(&GpioLed);
 
-	Keypad_Init();
+	Ketpad_Init();
 
 	setvbuf(stdout, NULL, _IONBF, 0);
 	printf("System ready. Enter PIN:\n");

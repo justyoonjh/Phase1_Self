@@ -46,74 +46,24 @@ int main(void)
 	GPIO_PeriClockControl(GPIOA, 1);
 	GPIO_Init(&GpioLed);
 
-	Keypad_Init();
-
 	setvbuf(stdout, NULL, _IONBF, 0);
-	printf("System ready. Enter PIN:\n");
+	printf("Systick Init OK. SystemCoreClock = %lu Hz\n", SystemCoreClock);
 
-	char input[PIN_LENGTH];
-	uint8_t input_idx = 0;
-	uint8_t locked = 0;
-	uint32_t lock_start = 0;
-	uint32_t prev_lock_print = 0;
+	uint32_t prev_log = 0;
+	uint32_t prev_led = 0;
 
 	while(1)
 	{
-		if (locked)
+		if ((GetTick() - prev_led) >= 500)
 		{
-			uint32_t elapsed = GetTick() - lock_start;
-
-			if (elapsed >= LOCK_TIME_MS)
-			{
-				locked = 0;
-				input_idx = 0;
-				printf("Unlocked. Enter PIN:\n");
-			}
-			else
-			{
-				if ((GetTick() - prev_lock_print) >= 1000)
-				{
-					uint32_t remaining = (LOCK_TIME_MS - elapsed) / 1000;
-					printf("Locked. %lu sec remaining...\n", remaining);
-					prev_lock_print = GetTick();
-				}
-			}
-			continue;
+			GPIO_ToggleOutputPin(GPIOA, GPIO_PIN_NO_5);
+			prev_led = GetTick();
 		}
 
-		char key = Keypad_Getkey();
-		if (key == 0) continue;
-
-		printf("Input: %c\n", key);
-		input[input_idx++] = key;
-
-		if (input_idx >= PIN_LENGTH)
+		if ((GetTick() - prev_log) >= 1000)
 		{
-			uint8_t correct = 1;
-			for (int i = 0; i < PIN_LENGTH; i++)
-			{
-				if (input[i] != CORRECT_PIN[i])
-				{
-					correct = 0;
-					break;
-				}
-			}
-
-			if (correct)
-			{
-				printf("PIN correct! LED ON. \n");
-				GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, GPIO_PIN_SET);
-			}
-			else
-			{
-				printf("Wrong PIN. Locked for %d sec. \n", LOCK_TIME_MS / 1000);
-				GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, GPIO_PIN_RESET);
-				locked = 1;
-				lock_start = GetTick();
-				prev_lock_print = GetTick();
-			}
-
-			input_idx = 0;
+			printf("[%lu ms] tick alive\n", GetTick());
+			prev_log = GetTick();
 		}
 	}
 

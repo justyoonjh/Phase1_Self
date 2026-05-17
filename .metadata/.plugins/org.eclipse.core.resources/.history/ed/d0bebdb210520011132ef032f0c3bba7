@@ -1,5 +1,4 @@
 #include "keypad_driver.h"
-#include "systick.h"
 
 static const uint8_t ROW_PINS[4] = {
 		GPIO_PIN_NO_0,
@@ -24,8 +23,7 @@ static const char KEY_MAP[4][4] = {
 
 static void delay_ms(uint32_t ms)
 {
-	uint32_t start = GetTick();
-	while((GetTick() - start) < ms);
+	for (volatile uint32_t i = 0; i < ms * 2000; i++);
 }
 
 void Keypad_Init(void)

@@ -924,3 +924,45 @@ arm-none-eabi-size  W7_SystickIsHeart.elf
    6676	     96	   1904	   8676	   21e4	W7_SystickIsHeart.elf
 Finished building: default.size.stdout
  
+02:18:22 **** Incremental Build of configuration Debug for project W7_SystickIsHeart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../BSP/keypad_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"BSP/keypad_driver.d" -MT"BSP/keypad_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "BSP/keypad_driver.o"
+../Src/main.c:26:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   26 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:49:9: warning: implicit declaration of function 'Ketpad_Init'; did you mean 'Keypad_Init'? [-Wimplicit-function-declaration]
+   49 |         Ketpad_Init();
+      |         ^~~~~~~~~~~
+      |         Keypad_Init
+arm-none-eabi-gcc -o "W7_SystickIsHeart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W7_SystickIsHeart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_2.0.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Src/main.o: in function `main':
+/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/Debug/../Src/main.c:49:(.text.main+0x40): undefined reference to `Ketpad_Init'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:65: W7_SystickIsHeart.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+02:18:40 **** Incremental Build of configuration Debug for project W7_SystickIsHeart ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:26:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   26 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "W7_SystickIsHeart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W7_SystickIsHeart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W7_SystickIsHeart.elf
+ 
+arm-none-eabi-size  W7_SystickIsHeart.elf 
+arm-none-eabi-objdump -h -S W7_SystickIsHeart.elf  > "W7_SystickIsHeart.list"
+   text	   data	    bss	    dec	    hex	filename
+   7752	     96	   1904	   9752	   2618	W7_SystickIsHeart.elf
+Finished building: default.size.stdout
+ 
+Finished building: W7_SystickIsHeart.list
+ 
+02:18:48 **** Incremental Build of configuration Debug for project W7_SystickIsHeart ****
+make -j4 all 
+arm-none-eabi-size  W7_SystickIsHeart.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7752	     96	   1904	   9752	   2618	W7_SystickIsHeart.elf
+Finished building: default.size.stdout
+ 
