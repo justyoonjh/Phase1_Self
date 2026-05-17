@@ -1,10 +1,10 @@
-02:18:48 **** Incremental Build of configuration Debug for project W7_SystickIsHeart ****
+02:37:46 **** Incremental Build of configuration Debug for project W7_SystickIsHeart ****
 make -j4 all 
 arm-none-eabi-size  W7_SystickIsHeart.elf 
    text	   data	    bss	    dec	    hex	filename
-   7752	     96	   1904	   9752	   2618	W7_SystickIsHeart.elf
+   7804	     96	   1912	   9812	   2654	W7_SystickIsHeart.elf
 Finished building: default.size.stdout
  
 
-02:18:48 Build Finished. 0 errors, 0 warnings. (took 176ms)
+02:37:46 Build Finished. 0 errors, 0 warnings. (took 167ms)
 
