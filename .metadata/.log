@@ -404,3 +404,33 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-05-15 00:44:30.941
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
+!SESSION 2026-05-16 23:45:10.494 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ko_KR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-16 23:45:18.654
+!MESSAGE Log4j2 initialized with config file /home/justjhst/바탕화면/Phase1_Self/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-16 23:45:25.205
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-05-17 14:09:54.446 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ko_KR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-17 14:10:02.320
+!MESSAGE Log4j2 initialized with config file /home/justjhst/바탕화면/Phase1_Self/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-17 14:10:08.966
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-17 15:47:30.379
+!MESSAGE Indexed 'W6_Keypad_Driver' (3 sources, 53 headers) in 0.993 sec: 1,954 declarations; 2,863 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-17 15:49:48.956
+!MESSAGE Indexed 'W6_Keypad_Driver' (3 sources, 56 headers) in 0.331 sec: 2,230 declarations; 3,136 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.037%)

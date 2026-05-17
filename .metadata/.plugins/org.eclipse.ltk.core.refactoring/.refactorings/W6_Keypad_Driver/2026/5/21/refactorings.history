@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;W6_Keypad_Driver/Drivers/keypad.driver.h&apos; to &apos;keypad_driver.h&apos;" description="Rename resource &apos;keypad.driver.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/keypad.driver.h" name="keypad_driver.h" stamp="1779002198594" updateReferences="true"/>
+</session>
