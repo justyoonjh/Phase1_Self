@@ -1,20 +1,10 @@
-23:32:06 **** Incremental Build of configuration Debug for project W7_SystickIsHeart ****
+01:28:36 **** Incremental Build of configuration Debug for project W7_SystickIsHeart ****
 make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:24:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   24 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-      |    ^~~~~~~
-arm-none-eabi-gcc -o "W7_SystickIsHeart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W7_SystickIsHeart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: W7_SystickIsHeart.elf
- 
 arm-none-eabi-size  W7_SystickIsHeart.elf 
-arm-none-eabi-objdump -h -S W7_SystickIsHeart.elf  > "W7_SystickIsHeart.list"
    text	   data	    bss	    dec	    hex	filename
-    712	      0	   1568	   2280	    8e8	W7_SystickIsHeart.elf
+   6648	     96	   1904	   8648	   21c8	W7_SystickIsHeart.elf
 Finished building: default.size.stdout
  
-Finished building: W7_SystickIsHeart.list
- 
 
-23:32:07 Build Finished. 0 errors, 1 warnings. (took 290ms)
+01:28:36 Build Finished. 0 errors, 0 warnings. (took 138ms)
 

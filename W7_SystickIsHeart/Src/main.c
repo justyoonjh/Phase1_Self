@@ -17,8 +17,9 @@
  */
 
 #include <stdint.h>
+#include <stdio.h>
 #include "gpio_driver.h"
-
+#include "systick.h"
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -26,6 +27,38 @@
 
 int main(void)
 {
-    /* Loop forever */
-	for(;;);
+	SysTick_Init();
+
+	GPIO_Handle_t GpioLed = {0};
+	GpioLed.pGPIOx											= GPIOA;
+	GpioLed.GPIO_PinConfig.GPIO_PinNumber					= GPIO_PIN_NO_5;
+	GpioLed.GPIO_PinConfig.GPIO_PinMode					= GPIO_MODE_OUTPUT;
+	GpioLed.GPIO_PinConfig.GPIO_PinSpeed					= GPIO_SPEED_LOW;
+	GpioLed.GPIO_PinConfig.GPIO_PinOPType					= GPIO_OPTYPE_PP;
+	GpioLed.GPIO_PinConfig.GPIO_PinPuPdControl			= GPIO_NO_PUPD;
+	GpioLed.GPIO_PinConfig.GPIO_PinAltFunMode				= 0;
+	GPIO_PeriClockControl(GPIOA, 1);
+	GPIO_Init(&GpioLed);
+
+	setvbuf(stdout, NULL, _IONBF, 0);
+	printf("Systick Init OK. SystemCoreClock = %lu Hz\n", SystemCoreClock);
+
+	uint32_t prev_log = 0;
+	uint32_t prev_led = 0;
+
+	while(1)
+	{
+		if ((GetTick() - prev_led) >= 500)
+		{
+			GPIO_ToggleOutputPin(GPIOA, GPIO_PIN_NO_5);
+			prev_led = GetTick();
+		}
+
+		if ((GetTick() - prev_log) >= 1000)
+		{
+			printf("[%lu ms] tick alive\n", GetTick());
+			prev_log = GetTick();
+		}
+	}
+
 }

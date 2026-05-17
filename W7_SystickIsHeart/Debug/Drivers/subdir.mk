@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Drivers/gpio_driver.c 
+../Drivers/gpio_driver.c \
+../Drivers/systick.c 
 
 OBJS += \
-./Drivers/gpio_driver.o 
+./Drivers/gpio_driver.o \
+./Drivers/systick.o 
 
 C_DEPS += \
-./Drivers/gpio_driver.d 
+./Drivers/gpio_driver.d \
+./Drivers/systick.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Drivers/%.o Drivers/%.su Drivers/%.cyclo: ../Drivers/%.c Drivers/subdir.mk
 clean: clean-Drivers
 
 clean-Drivers:
-	-$(RM) ./Drivers/gpio_driver.cyclo ./Drivers/gpio_driver.d ./Drivers/gpio_driver.o ./Drivers/gpio_driver.su
+	-$(RM) ./Drivers/gpio_driver.cyclo ./Drivers/gpio_driver.d ./Drivers/gpio_driver.o ./Drivers/gpio_driver.su ./Drivers/systick.cyclo ./Drivers/systick.d ./Drivers/systick.o ./Drivers/systick.su
 
 .PHONY: clean-Drivers
 
