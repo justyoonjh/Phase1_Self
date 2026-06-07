@@ -8,3 +8,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:W1_RegisterBlink\ Debug/activeL
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:W3~4_GPIO_Driver/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:W6_Keypad_Driver\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:W7_SystickIsHeart\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:W7_SystickIsHeart\ Debug/activeLaunchTarget=null\:---
