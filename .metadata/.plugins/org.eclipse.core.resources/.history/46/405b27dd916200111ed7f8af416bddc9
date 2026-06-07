@@ -17,7 +17,7 @@
 typedef enum {
 	USART_MODE_ONLY_TX,
 	USART_MODE_ONLY_RX,
-	USART_MODE_TX_RX
+	USART_MODE_Tx_RX
 }Mode_t;
 /*
  @USART_Baud

@@ -25,7 +25,7 @@ void USART_SetBaudData(USART_RegMap_t *pUSARTx, uint32_t BaudRate)
 	}
 
 	// USARTDIV = APB 클럭(25 * PCLKx) / (Oversampling * BaudRate)
-	if(pUSARTx->CR1 & USART_CR1_OVER8)
+	if(pUSARTx->CR1 & (1 << USART_CR1_OVER8))
 	{
 		usartdiv = ((25 * PCLKx) / (2 * BaudRate));
 	}else
@@ -37,9 +37,9 @@ void USART_SetBaudData(USART_RegMap_t *pUSARTx, uint32_t BaudRate)
 
 	tempreg |= M_Part << 4;
 
-	F_Part = (usartdiv - (M_Part * 100));
+	F_Part = (usartdiv - (M-Part * 100));
 
-	if(pUSARTx->CR1 & USART_CR1_OVER8)
+	if(pUSARTx->CR1 & (1 << USART_CR1_OVER8))
 	{
 		F_Part = (((F_Part * 8) + 50) /100) & ((uint8_t)0x07);
 	}else
@@ -122,9 +122,7 @@ void USART_Init(USART_Handle_t *pUSARTHandle)
 
 	/*Configuration of BRR*/
 
-	USART_SetBaudData(pUSARTHandle->pUSARTx, pUSARTHandle->USART_Config.USART_Baud);
 
-	USART_PeripheralControl(pUSARTHandle->pUSARTx, ENABLE);
 }
 
 void USART_PeripheralControl(USART_RegMap_t *pUSARTx, uint8_t Cmd)
@@ -268,9 +266,9 @@ uint8_t USART_SendDataIT(USART_Handle_t *pUSARTHandle, uint8_t *pTxBuffer, uint3
 		pUSARTHandle->pTxBuffer = pTxBuffer;
 		pUSARTHandle->TxBusyState = USART_BUSY_IN_TX;
 
-		pUSARTHandle->pUSARTx->CR1 |= USART_CR1_TXEIE;
+		pUSARTHandle->pUSARTx->CR1 |= (1 << USART_CR1_TXEIE);
 
-		pUSARTHandle->pUSARTx->CR1 |= USART_CR1_TCIE;
+		pUSARTHandle->pUSARTx->CR1 |= ( 1 << USART_CR1_TCIE);
 	}
 
 	return txstate;
@@ -294,13 +292,14 @@ uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle, uint8_t *pRxBuffer, ui
 	return rxstate;
 }
 
-void USART_ClearFlag(USART_RegMap_t *pUSARTx, uint16_t StatusFLagName)
+void USART_ClearFlag(USART_RegDef_t *pUSARTx, uint16_t StatusFLagName)
 {
 	pUSARTx->SR &= ~(StatusFLagName);
 }
 
 void USART_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi)
 {
+	NVIC_IPR(IRQNumber) = (Priority << 4);
 
 	uint8_t iser_idx = IRQNumber / 32;
 	uint8_t iser_bit = IRQNumber % 32;
@@ -321,7 +320,7 @@ void USART_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority)
 	uint8_t iprx_section = IRQNumber % 4;
 
 	uint8_t shift_amount = (8 * iprx_section) + (8 - NO_PR_BITS_IMPLEMENTED);
-	*((volatile uint32_t*)NVIC_IPR_BASE + iprx * 4) |= (IRQPriority << shift_amount);
+	*(NVIC_IPR_BASE + iprx) |= (IRQPriority << shift_amount);
 }
 
 void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
@@ -340,7 +339,7 @@ void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
 
 	if((pUSARTHandle->pUSARTx->SR & USART_SR_TC) && (pUSARTHandle->pUSARTx->CR1 & USART_CR1_TCIE))
 	{
-		if(pUSARTHandle->TxBusyState == USART_BUSY_IN_TX)
+		if(pUSARTHandle->TxBusyState == USART_BUST_IN_TX)
 		{
 			if(pUSARTHandle->TxLen == 0)
 			{

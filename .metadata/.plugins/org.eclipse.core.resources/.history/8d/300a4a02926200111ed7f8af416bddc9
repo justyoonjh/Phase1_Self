@@ -321,7 +321,7 @@ void USART_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority)
 	uint8_t iprx_section = IRQNumber % 4;
 
 	uint8_t shift_amount = (8 * iprx_section) + (8 - NO_PR_BITS_IMPLEMENTED);
-	*((volatile uint32_t*)NVIC_IPR_BASE + iprx * 4) |= (IRQPriority << shift_amount);
+	*(NVIC_IPR_BASE + iprx) |= (IRQPriority << shift_amount);
 }
 
 void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
