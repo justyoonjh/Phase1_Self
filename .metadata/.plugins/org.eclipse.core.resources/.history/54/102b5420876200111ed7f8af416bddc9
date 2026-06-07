@@ -1,0 +1,13 @@
+/*
+ * rcc_driver.h
+ *
+ *  Created on: 2026. 6. 8.
+ *      Author: justjhst
+ */
+
+#ifndef RCC_DRIVER_H_
+#define RCC_DRIVER_H_
+
+#define "address.h"
+
+#endif /* RCC_DRIVER_H_ */

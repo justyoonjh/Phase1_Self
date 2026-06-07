@@ -1,0 +1,19 @@
+/*
+ * rcc_driver.h
+ *
+ *  Created on: 2026. 6. 8.
+ *      Author: justjhst
+ */
+
+#ifndef RCC_DRIVER_H_
+#define RCC_DRIVER_H_
+
+#include "address.h"
+
+uint32_t RCC_GetPCLK1Value(void);
+
+uint32_t RCC_GetPCLK2Value(void);
+
+uint32_t RCC_GetPLLOutputClock(void);
+
+#endif /* RCC_DRIVER_H_ */

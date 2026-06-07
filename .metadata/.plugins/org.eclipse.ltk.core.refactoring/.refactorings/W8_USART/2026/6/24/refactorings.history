@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;W8_USART/Drivers/gpio_reg.h&apos; to &apos;address.h&apos;" description="Rename resource &apos;gpio_reg.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/gpio_reg.h" name="address.h" stamp="1780846259739" updateReferences="true"/>
+</session>
