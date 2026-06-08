@@ -27,8 +27,6 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
-volatile uint32_t rxDone = 0;
-USART_Handle_t usart3HandleR;
 
 int main(void)
 {
@@ -90,7 +88,7 @@ int main(void)
 	USART_IRQInterruptConfig(USART3_IRQ, ENABLE);
 
 	uint8_t buf[32];
-
+	volatile uint32_t rxDone = 0;
 
 	USART_ReceiveDataIT(&usart3HandleR, buf, 20);
 
@@ -106,8 +104,8 @@ int main(void)
 			USART_ReceiveDataIT(&usart3HandleR, buf, 20);
 		}
 	}
-}
-void USART3_IRQHandler(void)
+
+	void USART3_IRQHandler(void)
 	{
 		USART_IRQHandling(&usart3HandleR);
 	}
@@ -119,6 +117,8 @@ void USART3_IRQHandler(void)
 			rxDone = 1;
 		}
 	}
+}
+
 
 
 

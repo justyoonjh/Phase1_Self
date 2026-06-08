@@ -1,4 +1,41 @@
-22:39:12 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+00:46:28 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:27:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   27 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c:113:14: warning: 'USART_ApplicationEventCallback' defined but not used [-Wunused-function]
+  113 |         void USART_ApplicationEventCallback(USART_Handle_t *pUSARTHandle, uint8_t ApEv)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:108:14: warning: 'USART3_IRQHandler' defined but not used [-Wunused-function]
+  108 |         void USART3_IRQHandler(void)
+      |              ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "W8_USART2_Receiver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W8_USART2_Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W8_USART2_Receiver.elf
+ 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+arm-none-eabi-objdump -h -S W8_USART2_Receiver.elf  > "W8_USART2_Receiver.list"
+   text	   data	    bss	    dec	    hex	filename
+   4120	      4	   1572	   5696	   1640	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W8_USART2_Receiver.list
+ 
+00:46:34 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4120	      4	   1572	   5696	   1640	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+00:46:35 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4120	      4	   1572	   5696	   1640	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+00:51:32 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:27:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
@@ -10,22 +47,29 @@ Finished building target: W8_USART2_Receiver.elf
 arm-none-eabi-size  W8_USART2_Receiver.elf 
 arm-none-eabi-objdump -h -S W8_USART2_Receiver.elf  > "W8_USART2_Receiver.list"
    text	   data	    bss	    dec	    hex	filename
-   3852	      4	   1572	   5428	   1534	W8_USART2_Receiver.elf
+   4468	      4	   1612	   6084	   17c4	W8_USART2_Receiver.elf
 Finished building: default.size.stdout
  
 Finished building: W8_USART2_Receiver.list
  
-22:39:16 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+00:51:32 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
 make -j4 all 
-arm-none-eabi-size  W8_USART2_Receiver.elf 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
    text	   data	    bss	    dec	    hex	filename
-   3852	      4	   1572	   5428	   1534	W8_USART2_Receiver.elf
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
 Finished building: default.size.stdout
  
-22:39:17 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+00:51:43 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
 make -j4 all 
 arm-none-eabi-size  W8_USART2_Receiver.elf 
    text	   data	    bss	    dec	    hex	filename
-   3852	      4	   1572	   5428	   1534	W8_USART2_Receiver.elf
+   4468	      4	   1612	   6084	   17c4	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+00:51:44 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4468	      4	   1612	   6084	   17c4	W8_USART2_Receiver.elf
 Finished building: default.size.stdout
  
