@@ -32,8 +32,6 @@
 
 int main(void)
 {
-	SysTick_Init();
-
 	GPIO_PeriClockControl(GPIOA, ENABLE);
 
 	GPIO_Handle_t GpioUart = {0};

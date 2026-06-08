@@ -64,28 +64,16 @@ int main(void)
 	GpioUart2.GPIO_PinConfig.GPIO_PinSpeed			= GPIO_SPEED_FAST;
 	GpioUart2.GPIO_PinConfig.GPIO_PinOPType		= GPIO_OPTYPE_PP;
 	GpioUart2.GPIO_PinConfig.GPIO_PinPuPdControl 	= GPIO_PU;
-	GpioUart2.GPIO_PinConfig.GPIO_PinAltFunMode 	= 7;
+	GpioUart2. IO_PinConfigPIO_PinConfig.GPIO_PinAltFunMode	= 7;
 
-	GpioUart2.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_2;
-	GPIO_Init(&GpioUart2);
+	GpioUart1.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_7;
+	GPIO_Init(&GpioUart1);
 
-	USART_Handle_t usart2HandleT = {0};
-	usart2HandleT.pUSARTx								= USART2;
-	usart2HandleT.USART_Config.USART_Mode				= USART_MODE_ONLY_TX;
-	usart2HandleT.USART_Config.USART_Baud				= USART_STD_BAUD_115200;
-	usart2HandleT.USART_Config.USART_NoOfStopBits		= USART_STOPBITS_1;
-	usart2HandleT.USART_Config.USART_WordLength		= USART_WORDLEN_8BITS;
-	usart2HandleT.USART_Config.USART_ParityControl	= USART_PARITY_DISABLE;
-	usart2HandleT.USART_Config.USART_HWFlowControl	= USART_HW_FLOW_CTRL_NONE;
-
-	USART_Init(&usart2HandleT);
-
-	uint8_t buf[21];
 
 	while(1)
 	{
-		USART_ReceiveData(&usart1HandleR, buf, 21);
-		USART_SendData(&usart2Handle, buf, 21);
+
+		}
 	}
 
 }
