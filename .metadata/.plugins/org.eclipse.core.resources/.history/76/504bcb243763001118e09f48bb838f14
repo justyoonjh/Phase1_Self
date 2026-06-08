@@ -32,29 +32,29 @@ int main(void)
 {
 	SysTick_Init();
 
-	GPIO_PeriClockControl(GPIOC, ENABLE);
+	GPIO_PeriClockControl(GPIOB, ENABLE);
 
 	GPIO_Handle_t GpioUart1 = {0};
-	GpioUart1.pGPIOx									= GPIOC;
+	GpioUart1.pGPIOx									= GPIOB;
 	GpioUart1.GPIO_PinConfig.GPIO_PinMode			= GPIO_MODE_ALT;
 	GpioUart1.GPIO_PinConfig.GPIO_PinSpeed			= GPIO_SPEED_FAST;
 	GpioUart1.GPIO_PinConfig.GPIO_PinOPType		= GPIO_OPTYPE_PP;
 	GpioUart1.GPIO_PinConfig.GPIO_PinPuPdControl 	= GPIO_PU;
 	GpioUart1.GPIO_PinConfig.GPIO_PinAltFunMode	= 7;
 
-	GpioUart1.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_11;
+	GpioUart1.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_7;
 	GPIO_Init(&GpioUart1);
 
-	USART_Handle_t usart3HandleR = {0};
-	usart3HandleR.pUSARTx								= USART3;
-	usart3HandleR.USART_Config.USART_Mode				= USART_MODE_ONLY_RX;
-	usart3HandleR.USART_Config.USART_Baud				= USART_STD_BAUD_115200;
-	usart3HandleR.USART_Config.USART_NoOfStopBits		= USART_STOPBITS_1;
-	usart3HandleR.USART_Config.USART_WordLength		= USART_WORDLEN_8BITS;
-	usart3HandleR.USART_Config.USART_ParityControl	= USART_PARITY_DISABLE;
-	usart3HandleR.USART_Config.USART_HWFlowControl	= USART_HW_FLOW_CTRL_NONE;
+	USART_Handle_t usart1HandleR = {0};
+	usart1HandleR.pUSARTx								= USART1;
+	usart1HandleR.USART_Config.USART_Mode				= USART_MODE_ONLY_RX;
+	usart1HandleR.USART_Config.USART_Baud				= USART_STD_BAUD_115200;
+	usart1HandleR.USART_Config.USART_NoOfStopBits		= USART_STOPBITS_1;
+	usart1HandleR.USART_Config.USART_WordLength		= USART_WORDLEN_8BITS;
+	usart1HandleR.USART_Config.USART_ParityControl	= USART_PARITY_DISABLE;
+	usart1HandleR.USART_Config.USART_HWFlowControl	= USART_HW_FLOW_CTRL_NONE;
 
-	USART_Init(&usart3HandleR);
+	USART_Init(&usart1HandleR);
 
 	GPIO_PeriClockControl(GPIOA, ENABLE);
 
@@ -80,11 +80,11 @@ int main(void)
 
 	USART_Init(&usart2HandleT);
 
-	uint8_t buf[32];
+	uint8_t buf[256];
 
 	while(1)
 	{
-		USART_ReceiveData(&usart3HandleR, buf, 20);
+		USART_ReceiveData(&usart1HandleR, buf, 20);
 		USART_SendData(&usart2HandleT, buf, 20);
 	}
 
