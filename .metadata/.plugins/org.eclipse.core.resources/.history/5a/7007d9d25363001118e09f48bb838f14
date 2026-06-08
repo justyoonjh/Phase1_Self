@@ -28,7 +28,7 @@
 #endif
 
 volatile uint8_t rxDone = 0;
-USART_Handle_t usart3HandleR = {0};
+USART_Handle_t usart3HandleR;
 
 int main(void)
 {

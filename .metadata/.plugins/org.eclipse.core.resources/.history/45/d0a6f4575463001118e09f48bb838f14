@@ -335,7 +335,6 @@ void USART_IRQHandling(USART_Handle_t *pUSARTHandle)
 		if (pUSARTHandle->RxLen == 0)
 		{
 			pUSARTHandle->pUSARTx->CR1 &= ~USART_CR1_RXNEIE;
-			pUSARTHandle->RxBusyState = USART_READY;
 			USART_ApplicationEventCallback(pUSARTHandle, USART_EVENT_RX_CMPLT);
 		}
 	}

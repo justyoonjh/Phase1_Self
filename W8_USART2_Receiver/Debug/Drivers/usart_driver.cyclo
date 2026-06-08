@@ -11,4 +11,4 @@
 ../Drivers/usart_driver.c:303:6:USART_IRQInterruptConfig	2
 ../Drivers/usart_driver.c:319:6:USART_IRQPriorityConfig	1
 ../Drivers/usart_driver.c:328:6:USART_IRQHandling	13
-../Drivers/usart_driver.c:375:6:USART_ApplicationEventCallback	1
+../Drivers/usart_driver.c:376:6:USART_ApplicationEventCallback	1
