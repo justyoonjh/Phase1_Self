@@ -30,7 +30,7 @@
 
 int main(void)
 {
-	Systick_Init();
+	SysTick_Init();
 
 	GPIO_PeriClockControl(GPIOB, ENABLE);
 
@@ -80,12 +80,12 @@ int main(void)
 
 	USART_Init(&usart2HandleT);
 
-	uint8_t buf[21];
+	uint8_t buf[256];
 
 	while(1)
 	{
-		USART_ReceiveData(&usart1HandleR, buf, 21);
-		USART_SendData(&usart2Handle, buf, 21);
+		USART_ReceiveData(&usart1HandleR, buf, 22);
+		USART_SendData(&usart2HandleT, buf, 22);
 	}
 
 }

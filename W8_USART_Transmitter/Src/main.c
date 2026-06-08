@@ -58,11 +58,14 @@ int main(void)
 
 	USART_Init(&usart2Handle);
 
-	char msg[] = "Hello from STM32 #1\r\n";
+	uint32_t count = 0;
+	char msg[256];
 
 	while(1)
 	{
-		USART_SendData(&usart2Handle, (uint8_t*)msg, sizeof(msg) - 1);
+		snprintf(msg, sizeof(msg), "Buzz Pkt #%04lu OK\r\n", count++);
+
+		USART_SendData(&usart2Handle, (uint8_t*)msg, 22);
 		Delay_ms(1000);
 
 	}

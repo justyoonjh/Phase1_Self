@@ -1,6 +1,8 @@
 "./BSP/keypad_driver.o"
 "./Drivers/gpio_driver.o"
+"./Drivers/rcc_driver.o"
 "./Drivers/systick.o"
+"./Drivers/usart_driver.o"
 "./Src/main.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"

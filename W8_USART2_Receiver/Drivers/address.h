@@ -68,13 +68,13 @@
 
 typedef struct
 {
-	volatile GPIO_MODER_t MODER;
-	volatile GPIO_OTYPER_t OTYPER;
-	volatile GPIO_OSPEEDR_t OSPEEDR;
-	volatile GPIO_PUPDR_t PUPDR;
-	volatile GPIO_IDR_t IDR;
-	volatile GPIO_ODR_t ODR;
-	volatile GPIO_BSRR_t BSRR;
+	volatile uint32_t MODER;
+	volatile uint32_t OTYPER;
+	volatile uint32_t OSPEEDR;
+	volatile uint32_t PUPDR;
+	volatile uint32_t IDR;
+	volatile uint32_t ODR;
+	volatile uint32_t BSRR;
 	volatile uint32_t LCKR;
 	volatile uint32_t AFR[2];
 }GPIO_RegMap_t;

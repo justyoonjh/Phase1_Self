@@ -35,34 +35,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := W7_SystickIsHeart
+BUILD_ARTIFACT_NAME := W8_USART2_Receiver
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-W7_SystickIsHeart.elf \
+W8_USART2_Receiver.elf \
 
 MAP_FILES += \
-W7_SystickIsHeart.map \
+W8_USART2_Receiver.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-W7_SystickIsHeart.list \
+W8_USART2_Receiver.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: W7_SystickIsHeart.elf secondary-outputs
+main-build: W8_USART2_Receiver.elf secondary-outputs
 
 # Tool invocations
-W7_SystickIsHeart.elf W7_SystickIsHeart.map: $(OBJS) $(USER_OBJS) /home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "W7_SystickIsHeart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W7_SystickIsHeart/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W7_SystickIsHeart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+W8_USART2_Receiver.elf W8_USART2_Receiver.map: $(OBJS) $(USER_OBJS) /home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "W8_USART2_Receiver.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W8_USART2_Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -71,14 +71,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-W7_SystickIsHeart.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "W7_SystickIsHeart.list"
+W8_USART2_Receiver.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "W8_USART2_Receiver.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) W7_SystickIsHeart.elf W7_SystickIsHeart.list W7_SystickIsHeart.map default.size.stdout
+	-$(RM) W8_USART2_Receiver.elf W8_USART2_Receiver.list W8_USART2_Receiver.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

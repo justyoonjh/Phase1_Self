@@ -3,21 +3,7 @@
 
 #include "address.h"
 
-typedef struct
-{
-	GPIO_PinNumber_t GPIO_PinNumber;
-	GPIO_PinMode_t GPIO_PinMode;
-	GPIO_PinSpeed_t GPIO_PinSpeed;
-	GPIO_PinPuPd_t GPIO_PinPuPdControl;
-	GPIO_PinOPType_t GPIO_PinOPType;
-	uint8_t GPIO_PinAltFunMode;
-}GPIO_PinConfig_t;
 
-typedef struct
-{
-	GPIO_RegMap_t *pGPIOx;
-	GPIO_PinConfig_t GPIO_PinConfig;
-}GPIO_Handle_t;
 
 typedef enum {
 	GPIO_PIN_NO_0 = 0,
@@ -65,6 +51,22 @@ typedef enum {
 	GPIO_PU = 1,
 	GPIO_PD = 2
 }GPIO_PinPuPd_t;
+
+typedef struct
+{
+	GPIO_PinNumber_t GPIO_PinNumber;
+	GPIO_PinMode_t GPIO_PinMode;
+	GPIO_PinSpeed_t GPIO_PinSpeed;
+	GPIO_PinPuPd_t GPIO_PinPuPdControl;
+	GPIO_PinOPType_t GPIO_PinOPType;
+	uint8_t GPIO_PinAltFunMode;
+}GPIO_PinConfig_t;
+
+typedef struct
+{
+	GPIO_RegMap_t *pGPIOx;
+	GPIO_PinConfig_t GPIO_PinConfig;
+}GPIO_Handle_t;
 
 void GPIO_PeriClockControl(GPIO_RegMap_t *pGPIOx, uint8_t EnorDi);
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle);

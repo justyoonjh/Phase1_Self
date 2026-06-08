@@ -5,6 +5,7 @@
  *      Author: justjhst
  */
 #include "usart_driver.h"
+#include "rcc_driver.h"
 
 void USART_SetBaudData(USART_RegMap_t *pUSARTx, uint32_t BaudRate)
 {
