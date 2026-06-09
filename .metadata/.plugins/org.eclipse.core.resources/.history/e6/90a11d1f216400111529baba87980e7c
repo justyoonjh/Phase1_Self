@@ -64,7 +64,7 @@ int main(void)
 	usart3HandleR.USART_Config.USART_HWFlowControl	= USART_HW_FLOW_CTRL_NONE;
 	USART_Init(&usart3HandleR);
 
-	USART3->BRR = 125;
+//	USART3->BRR = 125;
 
 	uint32_t feCount = 0;
 	uint32_t oreCount = 0;
