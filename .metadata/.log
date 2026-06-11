@@ -2331,3 +2331,42 @@ org.eclipse.core.runtime.CoreException: Target not available.
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 org.eclipse.cdt.dsf 4 10001 2026-06-09 00:57:08.916
 !MESSAGE Target not available.
+!SESSION 2026-06-10 02:04:22.921 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ko_KR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-06-10 02:04:26.859
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-10 02:04:29.695
+!MESSAGE Log4j2 initialized with config file /home/justjhst/바탕화면/Phase1_Self/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-10 02:04:35.403
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-06-11 00:45:06.491 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ko_KR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-11 00:45:39.316
+!MESSAGE Log4j2 initialized with config file /home/justjhst/바탕화면/Phase1_Self/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-11 00:45:45.803
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-06-11 23:14:55.791 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ko_KR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-11 23:17:40.334
+!MESSAGE Log4j2 initialized with config file /home/justjhst/바탕화면/Phase1_Self/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-11 23:17:46.522
+!MESSAGE Started RMI Server, listening on port 41337

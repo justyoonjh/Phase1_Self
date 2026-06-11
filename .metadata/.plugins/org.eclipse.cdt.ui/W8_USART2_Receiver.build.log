@@ -1,10 +1,10 @@
-01:09:00 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+00:48:00 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
 make -j4 all 
 arm-none-eabi-size  W8_USART2_Receiver.elf 
    text	   data	    bss	    dec	    hex	filename
-   4480	      4	   1612	   6096	   17d0	W8_USART2_Receiver.elf
+   4172	      4	   1572	   5748	   1674	W8_USART2_Receiver.elf
 Finished building: default.size.stdout
  
 
-01:09:01 Build Finished. 0 errors, 0 warnings. (took 152ms)
+00:48:00 Build Finished. 0 errors, 0 warnings. (took 66ms)
 

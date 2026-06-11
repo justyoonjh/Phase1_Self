@@ -18,7 +18,6 @@
 
 #include <stdint.h>
 #include <stdio.h>
-#include <string.h>   //strncmp 추가
 #include "gpio_driver.h"
 #include "rcc_driver.h"
 #include "usart_driver.h"
@@ -55,56 +54,48 @@ int main(void)
 	GPIO_Init(&GpioUart);
 
 
-	USART_Handle_t usart2Handle = {0};
-	usart2Handle.pUSARTx									= USART2;
-	usart2Handle.USART_Config.USART_Mode				= USART_MODE_TX_RX;
-	usart2Handle.USART_Config.USART_Baud				= USART_STD_BAUD_115200;
-	usart2Handle.USART_Config.USART_NoOfStopBits		= USART_STOPBITS_1;
-	usart2Handle.USART_Config.USART_WordLength		= USART_WORDLEN_8BITS;
-	usart2Handle.USART_Config.USART_ParityControl		= USART_PARITY_DISABLE;
-	usart2Handle.USART_Config.USART_HWFlowControl		= USART_HW_FLOW_CTRL_NONE;
-	USART_Init(&usart2Handle);
+	USART_Handle_t usartHandleT = {0};
+	usart2HandleT.pUSARTx								= USART2;
+	usart2HandleT.USART_Config.USART_Mode				= USART_MODE_ONLY_TX;
+	usart2HandleT.USART_Config.USART_Baud				= USART_STD_BAUD_115200;
+	usart2HandleT.USART_Config.USART_NoOfStopBits		= USART_STOPBITS_1;
+	usart2HandleT.USART_Config.USART_WordLength		= USART_WORDLEN_8BITS;
+	usart2HandleT.USART_Config.USART_ParityControl	= USART_PARITY_DISABLE;
+	usart2HandleT.USART_Config.USART_HWFlowControl	= USART_HW_FLOW_CTRL_NONE;
+	USART_Init(&usart2HandleT);
 
-	uint8_t cmd[16];
-	uint8_t ledstate = 0;
+	USART_IRQInterruptConfig(USART3_IRQ, ENABLE);
+
+	uint8_t buf[32];
+
+
+	USART_ReceiveDataIT(&usart3HandleR, buf, 20);
 
 	while(1)
 	{
-		USART_ReceiveData(&usart2Handle, cmd, 10);
+		GPIO_ToggleOutputPin(GPIOA, GPIO_PIN_NO_5);
+		Delay_ms(200);
 
-		if(strncmp((char*)cmd, "LED ON", 6) == 0)
+		if(rxDone == 1)
 		{
-			ledstate = 1;
-			GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, GPIO_PIN_SET);
-			USART_SendData(&usart2Handle,
-					(uint8_t*)"[OK] LED ON\r\n", 13);
-		}
-		else if(strncmp((char*)cmd, "LED OFF", 7) == 0)
-		{
-			ledstate = 0;
-			GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, GPIO_PIN_RESET);
-			USART_SendData(&usart2Handle,
-					(uint8_t*)"[OK] LED OFF\r\n", 14);
-		}
-		else if(strncmp((char*)cmd, "STATUS", 6) == 0)
-		{
-			if(ledstate)
-			{
-				USART_SendData(&usart2Handle,
-						(uint8_t*)"LED: ON\r\n", 9);
-			}else{
-				USART_SendData(&usart2Handle,
-						(uint8_t*)"LED: OFF\r\n", 10);
-			}
-		}
-		else
-		{
-			USART_SendData(&usart2Handle,
-					(uint8_t*)"[UNKNOWN ERR]", 13);
+			rxDone = 0;
+			USART_SendData(&usart2HandleT, buf, 20);
+			USART_ReceiveDataIT(&usart3HandleR, buf, 20);
 		}
 	}
 }
+void USART3_IRQHandler(void)
+	{
+		USART_IRQHandling(&usart3HandleR);
+	}
 
+	void USART_ApplicationEventCallback(USART_Handle_t *pUSARTHandle, uint8_t ApEv)
+	{
+		if(ApEv == USART_EVENT_RX_CMPLT)
+		{
+			rxDone = 1;
+		}
+	}
 
 
 

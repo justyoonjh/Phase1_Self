@@ -18,7 +18,6 @@
 
 #include <stdint.h>
 #include <stdio.h>
-#include <string.h>   //strncmp 추가
 #include "gpio_driver.h"
 #include "rcc_driver.h"
 #include "usart_driver.h"
