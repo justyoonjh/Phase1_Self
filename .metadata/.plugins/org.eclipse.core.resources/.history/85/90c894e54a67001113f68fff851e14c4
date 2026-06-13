@@ -33,7 +33,7 @@ extern void ITM_SendChar(uint8_t ch);
 void USART_SendPacket(USART_Handle_t *pHandle, uint8_t *data, uint8_t len)
 {
 	uint8_t stx = 0x02;
-	uint8_t etx = 0x03;
+	uint8_t etx = 0xFF;
 
 	USART_SendData(pHandle, &stx, 1);
 	USART_SendData(pHandle, &len, 1);

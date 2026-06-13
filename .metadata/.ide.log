@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2026-06-08 14:18:58,758 [INFO] Activator:176 - 
 
 
@@ -13,3 +14,15 @@
 2026-06-08 22:11:36,836 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
 2026-06-08 22:16:59,053 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
 2026-06-08 22:17:00,664 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+=======
+2026-06-13 22:40:17,620 [INFO] Activator:176 - 
+
+
+2026-06-13 22:40:17,626 [INFO] Activator:177 - !SESSION log4j initialized
+2026-06-13 22:40:22,693 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+>>>>>>> Stashed changes
+2026-06-14 01:08:08,033 [INFO] Activator:176 - 
+
+
+2026-06-14 01:08:08,035 [INFO] Activator:177 - !SESSION log4j initialized
+2026-06-14 01:08:09,482 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 

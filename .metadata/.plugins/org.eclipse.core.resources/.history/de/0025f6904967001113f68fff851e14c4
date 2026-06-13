@@ -121,6 +121,7 @@ int main(void)
 	uint8_t pktBuf[256];
 	uint8_t pktLen = 0;
 
+
 	while(1)
 	{
 		if(USART_ReceivePacket(&usart3HandleR, pktBuf, &pktLen))

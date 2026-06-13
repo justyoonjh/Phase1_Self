@@ -1,10 +1,10 @@
-01:08:55 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+02:12:25 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
 make -j4 all 
 arm-none-eabi-size  W8_USART_Transmitter.elf 
    text	   data	    bss	    dec	    hex	filename
-   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+   6444	     84	   1900	   8428	   20ec	W8_USART_Transmitter.elf
 Finished building: default.size.stdout
  
 
-01:08:55 Build Finished. 0 errors, 0 warnings. (took 195ms)
+02:12:25 Build Finished. 0 errors, 0 warnings. (took 122ms)
 
