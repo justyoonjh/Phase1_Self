@@ -60,3 +60,225 @@ arm-none-eabi-size  W8_USART2_Receiver.elf
    4172	      4	   1572	   5748	   1674	W8_USART2_Receiver.elf
 Finished building: default.size.stdout
  
+01:21:55 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:74:17: error: 'idx' undeclared (first use in this function); did you mean 'index'?
+   74 |                 idx = 0;
+      |                 ^~~
+      |                 index
+../Src/main.c:74:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:21:55 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+01:22:24 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "W8_USART2_Receiver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W8_USART2_Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W8_USART2_Receiver.elf
+ 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+arm-none-eabi-objdump -h -S W8_USART2_Receiver.elf  > "W8_USART2_Receiver.list"
+   text	   data	    bss	    dec	    hex	filename
+   4288	      4	   1572	   5864	   16e8	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W8_USART2_Receiver.list
+ 
+01:22:24 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+01:22:31 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4288	      4	   1572	   5864	   16e8	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+01:31:35 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:71:17: warning: unused variable 'idx' [-Wunused-variable]
+   71 |         uint8_t idx;
+      |                 ^~~
+../Src/main.c:70:17: warning: unused variable 'ledstate' [-Wunused-variable]
+   70 |         uint8_t ledstate = 0;
+      |                 ^~~~~~~~
+../Src/main.c:69:17: warning: unused variable 'byte' [-Wunused-variable]
+   69 |         uint8_t byte;
+      |                 ^~~~
+../Src/main.c:68:17: warning: unused variable 'cmd' [-Wunused-variable]
+   68 |         uint8_t cmd[16];
+      |                 ^~~
+arm-none-eabi-gcc -o "W8_USART2_Receiver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W8_USART2_Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W8_USART2_Receiver.elf
+ 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+arm-none-eabi-objdump -h -S W8_USART2_Receiver.elf  > "W8_USART2_Receiver.list"
+   text	   data	    bss	    dec	    hex	filename
+   6464	     84	   1900	   8448	   2100	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W8_USART2_Receiver.list
+ 
+01:31:36 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+01:32:37 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6464	     84	   1900	   8448	   2100	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+02:08:54 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:71:17: warning: unused variable 'idx' [-Wunused-variable]
+   71 |         uint8_t idx;
+      |                 ^~~
+../Src/main.c:70:17: warning: variable 'ledstate' set but not used [-Wunused-but-set-variable]
+   70 |         uint8_t ledstate = 0;
+      |                 ^~~~~~~~
+../Src/main.c:69:17: warning: unused variable 'byte' [-Wunused-variable]
+   69 |         uint8_t byte;
+      |                 ^~~~
+../Src/main.c:68:17: warning: unused variable 'cmd' [-Wunused-variable]
+   68 |         uint8_t cmd[16];
+      |                 ^~~
+arm-none-eabi-gcc -o "W8_USART2_Receiver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W8_USART2_Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W8_USART2_Receiver.elf
+ 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+arm-none-eabi-objdump -h -S W8_USART2_Receiver.elf  > "W8_USART2_Receiver.list"
+   text	   data	    bss	    dec	    hex	filename
+   4320	      4	   1572	   5896	   1708	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W8_USART2_Receiver.list
+ 
+02:08:54 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+02:09:33 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:88:25: error: 'ledstate' undeclared (first use in this function)
+   88 |                         ledstate = 1;
+      |                         ^~~~~~~~
+../Src/main.c:88:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+02:09:33 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+02:09:58 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:68:17: warning: variable 'ledstate' set but not used [-Wunused-but-set-variable]
+   68 |         uint8_t ledstate = 0;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "W8_USART2_Receiver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W8_USART2_Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W8_USART2_Receiver.elf
+ 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+arm-none-eabi-objdump -h -S W8_USART2_Receiver.elf  > "W8_USART2_Receiver.list"
+   text	   data	    bss	    dec	    hex	filename
+   4316	      4	   1572	   5892	   1704	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W8_USART2_Receiver.list
+ 
+02:09:58 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+02:10:29 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:93:25: error: 'ledstate' undeclared (first use in this function)
+   93 |                         ledstate = 0;
+      |                         ^~~~~~~~
+../Src/main.c:93:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+02:10:30 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+02:10:42 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/Drivers" -I"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "W8_USART2_Receiver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W8_USART2_Receiver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W8_USART2_Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W8_USART2_Receiver.elf
+ 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+arm-none-eabi-objdump -h -S W8_USART2_Receiver.elf  > "W8_USART2_Receiver.list"
+   text	   data	    bss	    dec	    hex	filename
+   4300	      4	   1572	   5876	   16f4	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W8_USART2_Receiver.list
+ 
+02:10:42 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+02:10:48 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4300	      4	   1572	   5876	   16f4	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 
+02:10:48 **** Incremental Build of configuration Debug for project W8_USART_Transmitter ****
+make -j4 all 
+arm-none-eabi-size  W8_USART_Transmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6292	     84	   1900	   8276	   2054	W8_USART_Transmitter.elf
+Finished building: default.size.stdout
+ 
+02:10:53 **** Incremental Build of configuration Debug for project W8_USART2_Receiver ****
+make -j4 all 
+arm-none-eabi-size  W8_USART2_Receiver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4300	      4	   1572	   5876	   16f4	W8_USART2_Receiver.elf
+Finished building: default.size.stdout
+ 

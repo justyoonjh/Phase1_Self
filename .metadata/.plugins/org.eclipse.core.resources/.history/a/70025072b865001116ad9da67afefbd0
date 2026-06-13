@@ -65,6 +65,8 @@ int main(void)
 	usart2Handle.USART_Config.USART_HWFlowControl		= USART_HW_FLOW_CTRL_NONE;
 	USART_Init(&usart2Handle);
 
+	uint8_t ledstate = 0;
+
 	while(1)
 	{
 		uint8_t byte;
@@ -90,6 +92,7 @@ int main(void)
 		}
 		else if(strncmp((char*)cmd, "LED OFF", 7) == 0)
 		{
+			ledstate = 0;
 			GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, GPIO_PIN_RESET);
 			USART_SendData(&usart2Handle,
 					(uint8_t*)"\r\n[OK] LED OFF\r\n", 14);

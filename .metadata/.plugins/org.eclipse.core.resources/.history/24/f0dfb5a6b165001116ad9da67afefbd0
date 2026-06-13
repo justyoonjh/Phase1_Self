@@ -65,45 +65,36 @@ int main(void)
 	usart2Handle.USART_Config.USART_HWFlowControl		= USART_HW_FLOW_CTRL_NONE;
 	USART_Init(&usart2Handle);
 
+	uint8_t cmd[16];
+	uint8_t ledstate = 0;
+
 	while(1)
 	{
-		uint8_t byte;
-		uint8_t idx;
-		char cmd[16];
-
-		idx = 0;
-		memset(cmd, 0, sizeof(cmd));
-
-		while(idx < sizeof(cmd) - 1)
-		{
-			USART_ReceiveData(&usart2Handle, &byte, 1);
-			if(byte == '\r') break;	// 0x0D -> Enter 감지 -> 종료
-			cmd[idx++] = byte;
-		}
-		cmd[idx] = '\0';
+		USART_ReceiveData(&usart2Handle, cmd, 10);
 
 		if(strncmp((char*)cmd, "LED ON", 6) == 0)
 		{
+			ledstate = 1;
 			GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, GPIO_PIN_SET);
 			USART_SendData(&usart2Handle,
-					(uint8_t*)"\r\n[OK] LED ON\r\n", 13);
+					(uint8_t*)"[OK] LED ON\r\n", 13);
 		}
 		else if(strncmp((char*)cmd, "LED OFF", 7) == 0)
 		{
+			ledstate = 0;
 			GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, GPIO_PIN_RESET);
 			USART_SendData(&usart2Handle,
-					(uint8_t*)"\r\n[OK] LED OFF\r\n", 14);
+					(uint8_t*)"[OK] LED OFF\r\n", 14);
 		}
 		else if(strncmp((char*)cmd, "STATUS", 6) == 0)
 		{
-			uint8_t ledstate = GPIO_ReadFromInputPin(GPIOA, GPIO_PIN_NO_5);
 			if(ledstate)
 			{
 				USART_SendData(&usart2Handle,
-						(uint8_t*)"\r\nLED: ON\r\n", 9);
+						(uint8_t*)"LED: ON\r\n", 9);
 			}else{
 				USART_SendData(&usart2Handle,
-						(uint8_t*)"\r\nLED: OFF\r\n", 10);
+						(uint8_t*)"LED: OFF\r\n", 10);
 			}
 		}
 		else
