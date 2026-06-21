@@ -6,18 +6,24 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Drivers/Src/gpio_driver.c \
+../Drivers/Src/i2c_driver.c \
+../Drivers/Src/i2c_scanner.c \
 ../Drivers/Src/rcc_driver.c \
 ../Drivers/Src/systick.c \
 ../Drivers/Src/usart_driver.c 
 
 OBJS += \
 ./Drivers/Src/gpio_driver.o \
+./Drivers/Src/i2c_driver.o \
+./Drivers/Src/i2c_scanner.o \
 ./Drivers/Src/rcc_driver.o \
 ./Drivers/Src/systick.o \
 ./Drivers/Src/usart_driver.o 
 
 C_DEPS += \
 ./Drivers/Src/gpio_driver.d \
+./Drivers/Src/i2c_driver.d \
+./Drivers/Src/i2c_scanner.d \
 ./Drivers/Src/rcc_driver.d \
 ./Drivers/Src/systick.d \
 ./Drivers/Src/usart_driver.d 
@@ -30,7 +36,7 @@ Drivers/Src/%.o Drivers/Src/%.su Drivers/Src/%.cyclo: ../Drivers/Src/%.c Drivers
 clean: clean-Drivers-2f-Src
 
 clean-Drivers-2f-Src:
-	-$(RM) ./Drivers/Src/gpio_driver.cyclo ./Drivers/Src/gpio_driver.d ./Drivers/Src/gpio_driver.o ./Drivers/Src/gpio_driver.su ./Drivers/Src/rcc_driver.cyclo ./Drivers/Src/rcc_driver.d ./Drivers/Src/rcc_driver.o ./Drivers/Src/rcc_driver.su ./Drivers/Src/systick.cyclo ./Drivers/Src/systick.d ./Drivers/Src/systick.o ./Drivers/Src/systick.su ./Drivers/Src/usart_driver.cyclo ./Drivers/Src/usart_driver.d ./Drivers/Src/usart_driver.o ./Drivers/Src/usart_driver.su
+	-$(RM) ./Drivers/Src/gpio_driver.cyclo ./Drivers/Src/gpio_driver.d ./Drivers/Src/gpio_driver.o ./Drivers/Src/gpio_driver.su ./Drivers/Src/i2c_driver.cyclo ./Drivers/Src/i2c_driver.d ./Drivers/Src/i2c_driver.o ./Drivers/Src/i2c_driver.su ./Drivers/Src/i2c_scanner.cyclo ./Drivers/Src/i2c_scanner.d ./Drivers/Src/i2c_scanner.o ./Drivers/Src/i2c_scanner.su ./Drivers/Src/rcc_driver.cyclo ./Drivers/Src/rcc_driver.d ./Drivers/Src/rcc_driver.o ./Drivers/Src/rcc_driver.su ./Drivers/Src/systick.cyclo ./Drivers/Src/systick.d ./Drivers/Src/systick.o ./Drivers/Src/systick.su ./Drivers/Src/usart_driver.cyclo ./Drivers/Src/usart_driver.d ./Drivers/Src/usart_driver.o ./Drivers/Src/usart_driver.su
 
 .PHONY: clean-Drivers-2f-Src
 

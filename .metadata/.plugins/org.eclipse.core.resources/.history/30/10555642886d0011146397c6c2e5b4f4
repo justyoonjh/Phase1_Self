@@ -98,15 +98,6 @@ void I2C_GenerateStartCondition(I2C_RegMap_t *pI2Cx)
 }
 void I2C_GenerateStopCondition(I2C_RegMap_t *pI2Cx)
 {
-	pI2Cx->CR1 |= (1 << I2C_CR1_STOP);
-}
-
-uint8_t I2C_GetFlagStatus(I2C_RegMap_t *pI2Cx, uint32_t FlagName)
-{
-	if(pI2Cx->SR1 & FlagName)
-	{
-		return SET;
-	}
-	return RESET;
+	pI2Cx->CR1 |= (1 << I2C_CR1_START);
 }
 

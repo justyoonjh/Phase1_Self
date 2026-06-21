@@ -1,5 +1,7 @@
 "./BSP/keypad_driver.o"
 "./Drivers/Src/gpio_driver.o"
+"./Drivers/Src/i2c_driver.o"
+"./Drivers/Src/i2c_scanner.o"
 "./Drivers/Src/rcc_driver.o"
 "./Drivers/Src/systick.o"
 "./Drivers/Src/usart_driver.o"
