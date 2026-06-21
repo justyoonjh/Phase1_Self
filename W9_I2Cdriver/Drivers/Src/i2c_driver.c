@@ -1,0 +1,18 @@
+#include "rcc_driver.h"
+#include "i2c_driver.h"
+
+void I2C_PeriClockControl(I2C_RegMap_t *pI2Cx, uint8_t EnorDi)
+{
+	if (EnorDi == ENABLE)
+	{
+		if(pI2Cx == I2C1) {I2C1_CLK();}
+		else if(pI2Cx == I2C2) {I2C2_CLK();}
+		else if(pI2Cx == I2C3) {I2C3_CLK();}
+	}
+	else
+	{
+		if(pI2Cx == I2C1) {I2C1_CLK_DI();}
+		else if(pI2Cx == I2C2) {I2C2_CLK_DI();}
+		else if(pI2Cx == I2C3) {I2C3_CLK_DI();}
+	}
+}
