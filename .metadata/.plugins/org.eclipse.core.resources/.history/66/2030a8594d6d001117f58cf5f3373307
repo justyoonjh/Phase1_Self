@@ -149,20 +149,6 @@ typedef struct
 	volatile uint32_t GTPR;
 }USART_RegMap_t;
 
-typedef struct
-{
-	volatile uint32_t CR1;
-	volatile uint32_t CR2;
-	volatile uint32_t OAR1;
-	volatile uint32_t OAR2;
-	volatile uint32_t DR;
-	volatile uint32_t SR1;
-	volatile uint32_t SR2;
-	volatile uint32_t CCR;
-	volatile uint32_t TRISE;
-	volatile uint32_t FLTR;
-}I2C_RegMap_t;
-
 #define GPIOA				((GPIO_RegMap_t*) GPIOA_BASEADDR)
 #define GPIOB				((GPIO_RegMap_t*) GPIOB_BASEADDR)
 #define GPIOC				((GPIO_RegMap_t*) GPIOC_BASEADDR)
