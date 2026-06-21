@@ -1,0 +1,35 @@
+/*
+ * i2c_driver.c
+ *
+ *  Created on: 2026. 6. 21.
+ *      Author: justjhst
+ */
+#include "i2c_driver.h"
+#include "rcc_driver.h"
+
+void I2C_PeriClockControl(I2C_RegMap_t *pI2Cx, uint8_t EnorDi)
+{
+	if (EnorDi == ENABLE)
+	{
+		if(pI2Cx == I2C1) {I2C1_CLK();}
+		else if(pI2Cx == I2C2) {I2C2_CLK();}
+		else if(pI2Cx == I2C3) {I2C3_CLK();}
+	}
+	else
+	{
+		if(pI2Cx == I2C1) {I2C1_CLK_DI();}
+		else if(pI2Cx == I2C2) {I2C2_CLK_DI();}
+		else if(pI2Cx == I2C3) {I2C3_CLK_DI();}
+	}
+}
+
+void I2C_Init(I2C_Handle_t *pI2CHandle)
+{
+	uint32_t tempreg = 0;
+
+	I2C_PeriClockControl(pI2CHandle->pI2Cx, ENABLE);
+
+	tempreg |= pI2CHandle->I2C_Config.I2C_AckControl << 10;
+	pI2CHandle->pI2Cx->CR1 = tempreg;
+}
+

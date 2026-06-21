@@ -2,3 +2,5 @@
 1782027665957	Delete resource 'W8_USART_Transmitter/Src/usart_driver.c'
 1782027669288	Delete resource 'W8_USART_Transmitter/Src/rcc_driver.c'
 1782027672524	Delete resource 'W8_USART_Transmitter/Src/gpio_driver.c'
+1782038655732	Delete resource 'W9_I2Cdriver'
+1782039465986	Delete resource 'W9_I2CDriver/Drivers/Inc/i2c_driver.h'
