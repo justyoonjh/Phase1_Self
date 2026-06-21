@@ -1,0 +1,20 @@
+16:55:38 **** Incremental Build of configuration Debug for project W9_I2Cdriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2Cdriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2Cdriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:23:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   23 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "W9_I2Cdriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2Cdriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2Cdriver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2Cdriver.elf
+ 
+arm-none-eabi-size  W9_I2Cdriver.elf 
+arm-none-eabi-objdump -h -S W9_I2Cdriver.elf  > "W9_I2Cdriver.list"
+   text	   data	    bss	    dec	    hex	filename
+    728	      0	   1568	   2296	    8f8	W9_I2Cdriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2Cdriver.list
+ 
+
+16:55:38 Build Finished. 0 errors, 1 warnings. (took 122ms)
+

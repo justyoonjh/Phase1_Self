@@ -1,0 +1,4 @@
+1782027662930	Delete resource 'W8_USART_Transmitter/Src/systick.c'
+1782027665957	Delete resource 'W8_USART_Transmitter/Src/usart_driver.c'
+1782027669288	Delete resource 'W8_USART_Transmitter/Src/rcc_driver.c'
+1782027672524	Delete resource 'W8_USART_Transmitter/Src/gpio_driver.c'
