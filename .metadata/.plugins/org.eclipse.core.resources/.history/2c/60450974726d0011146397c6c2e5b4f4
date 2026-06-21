@@ -26,19 +26,14 @@ void I2C_PeriClockControl(I2C_RegMap_t *pI2Cx, uint8_t EnorDi)
 void I2C_Init(I2C_Handle_t *pI2CHandle)
 {
 	uint32_t tempreg = 0;
-	// 1. 클럭 켜기 + CR1(ACK) 설정
+
 	I2C_PeriClockControl(pI2CHandle->pI2Cx, ENABLE);
 
 	tempreg |= pI2CHandle->I2C_Config.I2C_AckControl << I2C_CR1_ACK;
 	pI2CHandle->pI2Cx->CR1 = tempreg;
-	// 2. FREQ 필드 설정(몇 클럭인지 I2C 페리퍼럴에 전달)
+
 	tempreg = 0;
 	tempreg |= RCC_GetPCLK1Value() / 1000000;
 	pI2CHandle->pI2Cx->CR2 = ((tempreg & 0x3F) << I2C_CR2_FREQ);
-	// 3. OAR1에 자기 주소 등록
-	tempreg = 0;
-	tempreg |= pI2CHandle->I2C_Config.I2C_DeviceAddress << I2C_OAR1_ADD;
-	tempreg |= (1 << 14);
-	pI2CHandle->pI2Cx->OAR1 = tempreg;
 }
 
