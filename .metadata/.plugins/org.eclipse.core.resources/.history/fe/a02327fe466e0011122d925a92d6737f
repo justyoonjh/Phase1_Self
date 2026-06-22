@@ -36,6 +36,8 @@ void I2C_AddressScan(I2C_Handle_t *pI2CHandle)
 		}
 
 		I2C_GenerateStopCondition(pI2CHandle->pI2Cx);
+
+		Delay_ms(5);
 	}
 }
 
