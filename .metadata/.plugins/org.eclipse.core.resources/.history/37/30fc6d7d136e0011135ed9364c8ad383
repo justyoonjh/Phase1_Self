@@ -23,7 +23,6 @@
 #include "usart_driver.h"
 #include "keypad_driver.h"
 #include "systick.h"
-#include "i2c_driver.h"
 
 int main(void)
 {

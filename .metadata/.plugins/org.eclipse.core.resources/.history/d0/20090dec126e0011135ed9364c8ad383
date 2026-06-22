@@ -23,7 +23,6 @@
 #include "usart_driver.h"
 #include "keypad_driver.h"
 #include "systick.h"
-#include "i2c_driver.h"
 
 int main(void)
 {
@@ -50,12 +49,6 @@ int main(void)
 	I2C1Handle.I2C_Config.I2C_AckControl = I2C_ACK_ENABLE;
 	I2C1Handle.I2C_Config.FMDutyCycle = I2C_FM_DUTY_2;
 	// Standard라 DUTY는 쓰이지 않음.
-
-	I2C_Init(&I2C1Handle);
-
-	I2C_PeripheralControl(I2C1, ENABLE);
-
-	I2C_AddressScan(&I2C1Handle);
 
 	while(1)
 	{
