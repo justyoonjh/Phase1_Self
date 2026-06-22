@@ -27,19 +27,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0000305c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00002447  00000000  00000000  0000308c  2**0
+ 12 .debug_info   00002438  00000000  00000000  0000308c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 0000097d  00000000  00000000  000054d3  2**0
+ 13 .debug_abbrev 00000950  00000000  00000000  000054c4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000280  00000000  00000000  00005e50  2**3
+ 14 .debug_aranges 00000280  00000000  00000000  00005e18  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 000001b8  00000000  00000000  000060d0  2**0
+ 15 .debug_rnglists 000001b8  00000000  00000000  00006098  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  000029da  00000000  00000000  00006288  2**0
+ 16 .debug_macro  000029dc  00000000  00000000  00006250  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000032f1  00000000  00000000  00008c62  2**0
+ 17 .debug_line   00003313  00000000  00000000  00008c2c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0000c2f8  00000000  00000000  0000bf53  2**0
+ 18 .debug_str    0000c30c  00000000  00000000  0000bf3f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  19 .comment      00000043  00000000  00000000  0001824b  2**0
                   CONTENTS, READONLY
@@ -1222,9 +1222,9 @@ uint8_t I2C_GetFlagStatus(I2C_RegMap_t *pI2Cx, uint32_t FlagName)
  8000a0a:	4770      	bx	lr
 
 08000a0c <I2C_AddressScan>:
-#include "rcc_driver.h"
 #include "systick.h"
 #include "stdio.h"
+#include "i2c_scanner.h"
 
 void I2C_AddressScan(I2C_Handle_t *pI2CHandle)
 {
@@ -1557,7 +1557,7 @@ void Delay_ms(uint32_t ms)
 08000bec <main>:
 #include "keypad_driver.h"
 #include "systick.h"
-#include "i2c_driver.h"
+#include "i2c_scanner.h"
 
 int main(void)
 {

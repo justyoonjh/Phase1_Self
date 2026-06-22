@@ -4,10 +4,10 @@
  *  Created on: 2026. 6. 22.
  *      Author: justjhst
  */
+#include "i2c_driver.h"
 #include "rcc_driver.h"
 #include "systick.h"
 #include "stdio.h"
-#include "i2c_scanner.h"
 
 void I2C_AddressScan(I2C_Handle_t *pI2CHandle)
 {
