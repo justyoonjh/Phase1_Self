@@ -47,8 +47,6 @@ int main(void)
 	I2C1Handle.I2C_Config.I2C_SCLspeed = I2C_SCL_SPEED_SM;
 	I2C1Handle.I2C_Config.I2C_DeviceAddress = 0x30;
 	I2C1Handle.I2C_Config.I2C_AckControl = I2C_ACK_DISABLE;
-	I2C1Handle.I2C_Config.FMDutyCycle = I2C_FM_DUTY_2;
-	// Standard라 DUTY는 쓰이지 않음.
 
 	while(1)
 	{
