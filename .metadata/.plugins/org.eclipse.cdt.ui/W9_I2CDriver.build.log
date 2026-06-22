@@ -1,10 +1,10 @@
-23:32:15 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+23:59:58 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
 make -j4 all 
 arm-none-eabi-size  W9_I2CDriver.elf 
    text	   data	    bss	    dec	    hex	filename
-   7584	     96	   1904	   9584	   2570	W9_I2CDriver.elf
+  17868	    460	   1908	  20236	   4f0c	W9_I2CDriver.elf
 Finished building: default.size.stdout
  
 
-23:32:16 Build Finished. 0 errors, 0 warnings. (took 125ms)
+23:59:58 Build Finished. 0 errors, 0 warnings. (took 126ms)
 
