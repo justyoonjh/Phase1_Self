@@ -1,1 +1,2 @@
 ../Drivers/Src/i2c_scanner.c:12:6:I2C_AddressScan	32	static
+../Drivers/Src/i2c_scanner.c:42:6:I2C_TriggerSingleAF	24	static

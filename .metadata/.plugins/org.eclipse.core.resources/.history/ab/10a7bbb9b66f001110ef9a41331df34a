@@ -42,8 +42,8 @@ void I2C_AddressScan(I2C_Handle_t *pI2CHandle)
 void I2C_TriggerSingleAF(I2C_Handle_t *pI2CHandle, uint8_t addr)
 {
 	I2C_GenerateStartCondition(pI2CHandle->pI2Cx);
-	uint32_t timeout = 5000;
-	while(!I2C_GetFlagStatus(pI2CHandle->pI2Cx, I2C_FLAG_SB) && --timeout);
+
+	while(!I2C_GetFlagStatus(pI2CHandle->pI2Cx, I2C_FLAG_SB));
 
 	pI2CHandle->pI2Cx->DR = ( addr << 1);
 }

@@ -688,3 +688,290 @@ Finished building: default.size.stdout
  
 Finished building: W9_I2CDriver.list
  
+18:51:06 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18404	    464	   1952	  20820	   5154	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+18:51:17 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18404	    464	   1952	  20820	   5154	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+18:52:10 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18252	    464	   1952	  20668	   50bc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+18:52:13 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18252	    464	   1952	  20668	   50bc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+18:57:15 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18252	    464	   1952	  20668	   50bc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+18:57:24 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18252	    464	   1952	  20668	   50bc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:00:05 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18252	    464	   1952	  20668	   50bc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:03:08 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18252	    464	   1952	  20668	   50bc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:03:10 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18252	    464	   1952	  20668	   50bc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:10:24 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Drivers/Src/i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_driver.d" -MT"Drivers/Src/i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/i2c_scanner.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_scanner.d" -MT"Drivers/Src/i2c_scanner.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_scanner.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18076	    464	   1952	  20492	   500c	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+19:10:27 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18076	    464	   1952	  20492	   500c	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:13:15 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18076	    464	   1952	  20492	   500c	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+19:13:18 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18076	    464	   1952	  20492	   500c	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:21:59 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18204	    464	   1952	  20620	   508c	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+19:22:04 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18204	    464	   1952	  20620	   508c	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:23:32 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/Src/i2c_scanner.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_scanner.d" -MT"Drivers/Src/i2c_scanner.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_scanner.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18228	    464	   1952	  20644	   50a4	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+19:23:39 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18228	    464	   1952	  20644	   50a4	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:24:18 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/Src/i2c_scanner.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_scanner.d" -MT"Drivers/Src/i2c_scanner.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_scanner.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18228	    464	   1952	  20644	   50a4	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+19:24:23 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18228	    464	   1952	  20644	   50a4	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+19:27:35 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+19:27:36 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+00:27:10 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+00:27:19 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+01:03:59 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+01:05:57 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+01:17:42 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+01:23:44 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Drivers/Src/gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/gpio_driver.d" -MT"Drivers/Src/gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/gpio_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_driver.d" -MT"Drivers/Src/i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/i2c_scanner.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_scanner.d" -MT"Drivers/Src/i2c_scanner.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_scanner.o"
+arm-none-eabi-gcc "../Drivers/Src/rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/rcc_driver.d" -MT"Drivers/Src/rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/rcc_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/usart_driver.d" -MT"Drivers/Src/usart_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/usart_driver.o"
+arm-none-eabi-gcc "../BSP/keypad_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"BSP/keypad_driver.d" -MT"BSP/keypad_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "BSP/keypad_driver.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
+01:23:46 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-size  W9_I2CDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+01:38:49 **** Incremental Build of configuration Debug for project W9_I2CDriver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Drivers/Src/gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/gpio_driver.d" -MT"Drivers/Src/gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/gpio_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_driver.d" -MT"Drivers/Src/i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/i2c_scanner.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/i2c_scanner.d" -MT"Drivers/Src/i2c_scanner.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/i2c_scanner.o"
+arm-none-eabi-gcc "../Drivers/Src/rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/rcc_driver.d" -MT"Drivers/Src/rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/rcc_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/usart_driver.d" -MT"Drivers/Src/usart_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/usart_driver.o"
+arm-none-eabi-gcc "../BSP/keypad_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/BSP" -I"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"BSP/keypad_driver.d" -MT"BSP/keypad_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "BSP/keypad_driver.o"
+arm-none-eabi-gcc -o "W9_I2CDriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/justjhst/바탕화면/Phase1_Self/W9_I2CDriver/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W9_I2CDriver.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: W9_I2CDriver.elf
+ 
+arm-none-eabi-size  W9_I2CDriver.elf 
+arm-none-eabi-objdump -h -S W9_I2CDriver.elf  > "W9_I2CDriver.list"
+   text	   data	    bss	    dec	    hex	filename
+  18268	    464	   1952	  20684	   50cc	W9_I2CDriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: W9_I2CDriver.list
+ 
