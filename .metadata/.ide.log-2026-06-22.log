@@ -1,0 +1,57 @@
+2026-06-22 14:47:07,569 [INFO] Activator:176 - 
+
+
+2026-06-22 14:47:07,575 [INFO] Activator:177 - !SESSION log4j initialized
+2026-06-22 14:47:12,086 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-06-22 17:30:51,311 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 17:32:34,599 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 17:32:36,040 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 17:39:30,499 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 17:39:45,397 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 17:39:47,654 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 17:39:49,191 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 17:42:30,084 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 17:42:31,312 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 17:47:53,268 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 17:47:54,736 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 17:51:28,344 [INFO] Activator:176 - 
+
+
+2026-06-22 17:51:28,346 [INFO] Activator:177 - !SESSION log4j initialized
+2026-06-22 17:51:33,129 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-06-22 17:52:04,591 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 17:52:06,015 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 18:10:52,934 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 18:10:54,947 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 18:15:49,709 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2026-06-22 18:15:58,678 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 18:15:59,716 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 18:30:07,110 [INFO] Activator:176 - 
+
+
+2026-06-22 18:30:07,112 [INFO] Activator:177 - !SESSION log4j initialized
+2026-06-22 18:30:12,059 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-06-22 18:30:37,321 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 18:30:39,015 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 18:34:40,807 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 18:34:42,584 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 18:58:58,258 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 18:59:01,221 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-06-22 23:01:30,465 [INFO] Activator:176 - 
+
+
+2026-06-22 23:01:30,467 [INFO] Activator:177 - !SESSION log4j initialized
+2026-06-22 23:01:35,052 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-06-22 23:03:01,292 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Exception in thread "SWV client thread" java.lang.NullPointerException: Cannot invoke "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.isDebugging()" because "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.plugin" is null
+2026-06-22 23:03:01,293 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.debugTrace(SWVPlugin.java:85)
+2026-06-22 23:03:01,294 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.TRACE(SWVClient.java:768)
+2026-06-22 23:03:01,294 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.readByte(SWVClient.java:296)
+2026-06-22 23:03:01,295 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.getNextByte(SWVClient.java:277)
+2026-06-22 23:03:01,295 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.run(SWVClient.java:313)
+2026-06-22 23:03:13,414 [INFO] Activator:176 - 
+
+
+2026-06-22 23:03:13,416 [INFO] Activator:177 - !SESSION log4j initialized
+2026-06-22 23:03:18,276 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-06-22 23:58:23,475 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-06-22 23:58:25,642 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true

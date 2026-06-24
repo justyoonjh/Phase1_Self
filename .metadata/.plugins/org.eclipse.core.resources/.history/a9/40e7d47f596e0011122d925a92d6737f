@@ -28,26 +28,6 @@
 #define DWT_CYCCNT	(*(volatile uint32_t*)0xE0001004)
 #define DEMCR_REG		(*(volatile uint32_t*)0xE000EDFC)
 
-volatile uint8_t g_i2cErrorFlag = 0;
-volatile uint8_t g_i2cErrorCode = 0xFF;
-
-void I2C_ApplicationEventCallback(I2C_Handle_t *pI2CHandle, uint8_t AppEv)
-{
-	switch(AppEv)
-	{
-	case I2C_ERROR_BERR:
-	case I2C_ERROR_ARLO:
-	case I2C_ERROR_AF:
-	case I2C_ERROR_OVR:
-	case I2C_ERROR_TIMEOUT:
-		g_i2cErrorFlag = 1;
-		g_i2cErrorCode = AppEv;
-		break;
-	default:
-		break;
-	}
-}
-
 int main(void)
 {
 	DEMCR_REG |= (1 << 24);
@@ -77,7 +57,7 @@ int main(void)
 	I2C1Handle.I2C_Config.I2C_SCLspeed = I2C_SCL_SPEED_FM4K;
 	I2C1Handle.I2C_Config.I2C_DeviceAddress = 0x30;
 	I2C1Handle.I2C_Config.I2C_AckControl = I2C_ACK_ENABLE;
-	I2C1Handle.I2C_Config.FMDutyCycle = I2C_FM_DUTY_16_9;
+	I2C1Handle.I2C_Config.FMDutyCycle = I2C_FM_DUTY_2;
 	// Standard라 DUTY는 쓰이지 않음.
 
 	I2C_Init(&I2C1Handle);
@@ -94,11 +74,7 @@ int main(void)
 
 	while(1)
 	{
-		if(g_i2cErrorFlag)
-		{
-			printf("I2C Error occurred: code %d\r\n", g_i2cErrorCode);
-			g_i2cErrorFlag = 0;
-		}
+
 
 	}
 

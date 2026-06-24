@@ -28,26 +28,6 @@
 #define DWT_CYCCNT	(*(volatile uint32_t*)0xE0001004)
 #define DEMCR_REG		(*(volatile uint32_t*)0xE000EDFC)
 
-volatile uint8_t g_i2cErrorFlag = 0;
-volatile uint8_t g_i2cErrorCode = 0xFF;
-
-void I2C_ApplicationEventCallback(I2C_Handle_t *pI2CHandle, uint8_t AppEv)
-{
-	switch(AppEv)
-	{
-	case I2C_ERROR_BERR:
-	case I2C_ERROR_ARLO:
-	case I2C_ERROR_AF:
-	case I2C_ERROR_OVR:
-	case I2C_ERROR_TIMEOUT:
-		g_i2cErrorFlag = 1;
-		g_i2cErrorCode = AppEv;
-		break;
-	default:
-		break;
-	}
-}
-
 int main(void)
 {
 	DEMCR_REG |= (1 << 24);
@@ -94,11 +74,7 @@ int main(void)
 
 	while(1)
 	{
-		if(g_i2cErrorFlag)
-		{
-			printf("I2C Error occurred: code %d\r\n", g_i2cErrorCode);
-			g_i2cErrorFlag = 0;
-		}
+
 
 	}
 

@@ -88,6 +88,5 @@ void I2C_GenerateStartCondition(I2C_RegMap_t *pI2Cx);
 void I2C_GenerateStopCondition(I2C_RegMap_t *pI2Cx);
 
 void I2C_ER_IRQHandling(I2C_Handle_t *pI2CHandle);
-void I2C_ApplicationEventCallback(I2C_Handle_t *pI2CHandle, uint8_t AppEv);
 
 #endif /* INC_I2C_DRIVER_H_ */
