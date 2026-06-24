@@ -329,11 +329,11 @@ static inline uint8_t GPIO_BASEADDR_TO_CODE(GPIO_RegMap_t *pGPIOx) {
 #define I2C_CR1_SWRST		15
 
 #define I2C_CR2_FREQ			0
-#define I2C_CR2_ITERREN		10
-#define I2C_CR2_ITEVTEN		9
-#define I2C_CR2_ITBUFEN		8
-#define I2C_CR2_DMAEN		11
-#define I2C_CR2_LAST			12
+#define I2C_CR2_ITERREN		5
+#define I2C_CR2_ITEVTEN		6
+#define I2C_CR2_ITBUFEN		7
+#define I2C_CR2_DMAEN		8
+#define I2C_CR2_LAST			9
 
 #define I2C_CCR_CCR			0
 #define I2C_CCR_DUTY			14
