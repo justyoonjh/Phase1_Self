@@ -97,40 +97,6 @@ void I2C_GenerateStartCondition(I2C_RegMap_t *pI2Cx)
 {
 	pI2Cx->CR1 |= (1 << I2C_CR1_START);
 }
-
-void I2C_MasterSendData(I2C_Handle_t *pI2CHandle, uint8_t *pTxBuffer, uint32_t Len, uint8_t SlaveAddr, uint8_t Sr)
-{
-	I2C_GenerateStartCondition(pI2CHandle->pI2Cx);
-
-	if(!I2C_GetFlagStatus(pI2CHandle->pI2Cx, I2C_FLAG_SB)) goto handle_af;
-	pI2CHandle->pI2Cx->DR = (SlaveAddr << 1);
-
-	if(!I2C_GetFlagStatus(pI2CHandle->pI2Cx, I2C_FLAG_ADDR)) goto handle_af;
-	(void)pI2CHandle->pI2Cx->SR1;
-	(void)pI2CHandle->pI2Cx->SR2;
-
-	while(Len > 0)
-	{
-		if(!I2C_GetFlagStatus(pI2CHandle->pI2Cx, I2C_FLAG_TXE)) goto handle_af;
-		pI2CHandle->pI2Cx->DR = *pTxBuffer;
-		pTxBuffer++;
-		Len--;
-	}
-
-	if(!I2C_GetFlagSataus(pI2CHandle->pI2Cx, I2C_FLAG_BTF)) goto handle_af;
-
-	if(Sr == I2C_DISABLE_SR)
-	{
-		I2C_GenerateStopCondition(pI2CHandle->pI2Cx);
-	}
-	return;
-
-handle_af:
-	I2C_GenerateStopCondition(pI2CHandle->pI2Cx);
-	pI2CHandle->pI2Cx->SR1 &= ~I2C_FLAG_AF;
-}
-
-
 void I2C_GenerateStopCondition(I2C_RegMap_t *pI2Cx)
 {
 	pI2Cx->CR1 |= (1 << I2C_CR1_STOP);
